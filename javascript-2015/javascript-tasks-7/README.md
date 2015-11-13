@@ -19,7 +19,7 @@ var me = {
 };
 
 me.checkContainsKeys(['age', 'name']); // true
-me.checkValueHasType(['age', String]) // false
+me.checkHasValueType(['age', String]) // false
 ```
 
 Примеры для основного и дополнительных заданий находятся в папке `examples`, а заготовка самого модуля -- в папке `src`. Как обычно, тесты можно найти в папке `test`.
@@ -33,7 +33,7 @@ me.checkValueHasType(['age', String]) // false
 * `checkHasKeys(keys)` Определён для объектов и массивов. Проверяет, что цель содержит только указанные ключи.
 * `checkContainsValues(values)` Определён для объектов и массивов. Проверяет, что цель содержит указанные значения.
 * `checkHasValues(values)` Определён для объектов и массивов. Проверяет, что цель содержит только указанные значения.
-* `checkValueHasType(key, type)` Определён для объектов и массивов. Проверяет, что значение по указанному ключу относится к указанному типу. Поддерживаемые типы: `String`, `Number`, `Function`, `Array`.
+* `checkHasValueType(key, type)` Определён для объектов и массивов. Проверяет, что значение по указанному ключу относится к указанному типу. Поддерживаемые типы: `String`, `Number`, `Function`, `Array`.
 * `checkHasLength(length)` Определён для массивов и строк. Проверяет, что длина цели соответствует указанной.
 * `checkHasParamsCount(count)` Определён для функций. Проверяет, что количество аргументов функции соответствует указанному.
 * `checkHasWordsCount(count)` Определён для строк. Проверяет, что количество строк в строке соответствует указанному. Словом считается последовательность символов, ограниченная с обеих сторон пробелами или началом/концом строки.
@@ -65,7 +65,7 @@ var me = {
 };
 
 me.check.containsKeys(['age', 'name']); // true
-me.check.valueHasType(['age', String]) // false
+me.check.hasValueType(['age', String]) // false
 ```
 
 ### null
@@ -101,5 +101,5 @@ var me = {
 };
 
 me.check.not.containsKeys(['age', 'name']); // false
-me.check.not.valueHasType(['age', String]) // true
+me.check.not.hasValueType(['age', String]) // true
 ```
