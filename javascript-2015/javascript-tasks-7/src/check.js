@@ -1,7 +1,24 @@
 'use strict';
 
+function checkContainsKeys(keys) {
+    var elements = Object.keys(this);
+    for (var indexElem in elements) {
+        if (elements[indexElem] != keys[indexElem]) {
+            return false;
+        }
+    }
+    return true;
+}
+
+function checkHasKeys(keys) {
+    if (Object.keys(keys).length != Object.keys(this).length) {
+        return false;
+    }
+    return this.checkContainsKeys(keys);
+}
+
 function checkContainsValues(values) {
-    for (var indexElem in this) {
+    for (var indexElem in values) {
         if (this[indexElem] != values[indexElem]) {
             return false;
         }
@@ -10,8 +27,7 @@ function checkContainsValues(values) {
 }
 
 function checkHasValues(values) {
-    if (values.length != this.length ||
-        Object.keys(values).length != Object.keys(this).length) {
+    if (Object.keys(values).length != Object.keys(this).length) {
         return false;
     }
     return this.checkContainsValues(values);
@@ -34,6 +50,12 @@ function checkHasWordsCount(count){
 }
 
 exports.init = function () {
+
+    Object.prototype.checkContainsKeys = checkContainsKeys;
+    Array.prototype.checkContainsKeys = checkContainsKeys;
+
+    Object.prototype.checkHasKeys = checkHasKeys;
+    Array.prototype.checkHasKeys = checkHasKeys;
 
     Object.prototype.checkContainsValues = checkContainsValues;
     Array.prototype.checkContainsValues = checkContainsValues;
