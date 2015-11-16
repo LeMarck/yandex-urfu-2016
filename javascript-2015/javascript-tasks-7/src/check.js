@@ -2,7 +2,7 @@
 
 function checkContainsKeys(keys) {
     var elements = Object.keys(this);
-    for (var indexElem in elements) {
+    for (var indexElem in keys) {
         if (elements.indexOf(keys[indexElem]) == -1 && typeof keys[indexElem] != "function") {
             return false;
         }
