@@ -3,7 +3,7 @@
 function checkContainsKeys(keys) {
     var elements = Object.keys(this);
     for (var indexElem in elements) {
-        if (elements[indexElem] != keys[indexElem]) {
+        if (elements.indexOf(keys[indexElem]) == -1 && typeof keys[indexElem] != "function") {
             return false;
         }
     }
@@ -19,7 +19,7 @@ function checkHasKeys(keys) {
 
 function checkContainsValues(values) {
     for (var indexElem in values) {
-        if (this[indexElem] != values[indexElem]) {
+        if (this.indexOf(values[indexElem]) == -1 && typeof values[indexElem] != "function") {
             return false;
         }
     }
