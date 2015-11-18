@@ -1,9 +1,12 @@
 'use strict';
 
 function checkContainsKeys(keys) {
+    if (typeof this != 'object') {
+        throw TypeError(typeof this + '.checkContainsKeys(keys) is not a function');
+    }
     var elements = Object.keys(this);
     for (var indexElem in keys) {
-        if (elements.indexOf(keys[indexElem]) == -1 && typeof keys[indexElem] != "function") {
+        if (elements.indexOf(keys[indexElem]) == -1 && typeof keys[indexElem] != 'function') {
             return false;
         }
     }
@@ -11,6 +14,9 @@ function checkContainsKeys(keys) {
 }
 
 function checkHasKeys(keys) {
+    if (typeof this != 'object') {
+        throw TypeError(typeof this + '.checkHasKeys(keys) is not a function');
+    }
     if (Object.keys(keys).length != Object.keys(this).length) {
         return false;
     }
@@ -18,8 +24,16 @@ function checkHasKeys(keys) {
 }
 
 function checkContainsValues(values) {
+    var elements = [];
+    if (typeof this === 'object') {
+        for (var key in this) {
+            elements.push(this[key]);
+        }
+    } else {
+        throw TypeError(typeof this + '.checkContainsValues(values) is not a function');
+    }
     for (var indexElem in values) {
-        if (this.indexOf(values[indexElem]) == -1 && typeof values[indexElem] != "function") {
+        if (elements.indexOf(values[indexElem]) == -1 && typeof values[indexElem] != 'function') {
             return false;
         }
     }
@@ -27,6 +41,9 @@ function checkContainsValues(values) {
 }
 
 function checkHasValues(values) {
+    if (typeof this != 'object') {
+        throw TypeError(typeof this + '.checkHasValues(values) is not a function');
+    }
     if (Object.keys(values).length != Object.keys(this).length) {
         return false;
     }
@@ -34,7 +51,10 @@ function checkHasValues(values) {
 }
 
 function checkHasValueType(key, type) {
-    return typeof this[key] === type.name.toLowerCase();
+    if (typeof this != 'object') {
+        throw TypeError(typeof this + '.checkHasValues(values) is not a function');
+    }
+    return Object(this[key]) instanceof type;
 }
 
 function checkHasLength(length) {
@@ -52,19 +72,14 @@ function checkHasWordsCount(count){
 exports.init = function () {
 
     Object.prototype.checkContainsKeys = checkContainsKeys;
-    Array.prototype.checkContainsKeys = checkContainsKeys;
 
     Object.prototype.checkHasKeys = checkHasKeys;
-    Array.prototype.checkHasKeys = checkHasKeys;
 
     Object.prototype.checkContainsValues = checkContainsValues;
-    Array.prototype.checkContainsValues = checkContainsValues;
 
     Object.prototype.checkHasValues = checkHasValues;
-    Array.prototype.checkHasValues = checkHasValues;
 
     Object.prototype.checkHasValueType = checkHasValueType;
-    Array.prototype.checkHasValueType = checkHasValueType;
 
     Array.prototype.checkHasLength = checkHasLength;
     String.prototype.checkHasLength = checkHasLength;
