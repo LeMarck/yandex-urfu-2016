@@ -61,11 +61,11 @@ function checkHasLength(length) {
     return this.length === length;
 }
 
-function checkHasParamsCount(count){
+function checkHasParamsCount(count) {
     return this.length == count;
 }
 
-function checkHasWordsCount(count){
+function checkHasWordsCount(count) {
     return this.split(/\s+/).length == count;
 }
 
