@@ -5,7 +5,7 @@ function checkContainsKeys(keys) {
         throw TypeError(typeof this + '.checkContainsKeys(keys) is not a function');
     }
     var elements = Object.keys(this);
-    keys.forEach(function(key) {
+    keys.forEach(function (key) {
         if (elements.indexOf(key) === -1) {
             return false;
         }
@@ -32,7 +32,7 @@ function checkContainsValues(values) {
     } else {
         throw TypeError(typeof this + '.checkContainsValues(values) is not a function');
     }
-    values.forEach(function(value) {
+    values.forEach(function (value) {
         if (elements.indexOf(value) === -1) {
             return false;
         }
