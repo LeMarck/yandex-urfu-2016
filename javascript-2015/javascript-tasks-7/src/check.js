@@ -5,11 +5,11 @@ function checkContainsKeys(keys) {
         throw TypeError(typeof this + '.checkContainsKeys(keys) is not a function');
     }
     var elements = Object.keys(this);
-    for (var indexElem in keys) {
-        if (elements.indexOf(keys[indexElem]) == -1 && typeof keys[indexElem] != 'function') {
+    keys.forEach(function(key) {
+        if (elements.indexOf(key) === -1) {
             return false;
         }
-    }
+    });
     return true;
 }
 
@@ -32,11 +32,11 @@ function checkContainsValues(values) {
     } else {
         throw TypeError(typeof this + '.checkContainsValues(values) is not a function');
     }
-    for (var indexElem in values) {
-        if (elements.indexOf(values[indexElem]) == -1 && typeof values[indexElem] != 'function') {
+    values.forEach(function(value) {
+        if (elements.indexOf(value) === -1) {
             return false;
         }
-    }
+    });
     return true;
 }
 
@@ -62,11 +62,11 @@ function checkHasLength(length) {
 }
 
 function checkHasParamsCount(count) {
-    return this.length == count;
+    return this.length === count;
 }
 
 function checkHasWordsCount(count) {
-    return this.split(/\s+/).length == count;
+    return this.split(/\s+/).length === count;
 }
 
 exports.init = function () {
@@ -87,4 +87,5 @@ exports.init = function () {
     Function.prototype.checkHasParamsCount = checkHasParamsCount;
 
     String.prototype.checkHasWordsCount = checkHasWordsCount;
+
 };
