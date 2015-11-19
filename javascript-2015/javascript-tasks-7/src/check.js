@@ -69,6 +69,34 @@ function checkHasWordsCount(count) {
     return this.split(/\s+/).length === count;
 }
 
+function namespace() {
+    return {
+        containsKeys: checkContainsKeys,
+        hasKeys: checkHasKeys,
+        hasValueType: checkHasValueType,
+        hasLength: checkHasLength,
+        hasValues: checkHasValues,
+        containsValues: checkContainsValues,
+        hasParamsCount: checkHasParamsCount,
+        hasWordsCount: checkHasWordsCount
+    }
+}
+
+function getMethods(obj) {
+    if (Object(obj) instanceof Array) {
+        return ['containsKeys', 'hasKeys', 'containsValues', 'hasValues', 'hasValueType', 'hasLength'];
+    }
+    if (Object(obj) instanceof String) {
+        return ['hasLength', 'hasWordsCount'];
+    }
+    if (Object(obj) instanceof Function) {
+        return ['hasParamsCount'];
+    }
+    if (Object(obj) instanceof Object) {
+        return ['containsKeys', 'hasKeys', 'containsValues', 'hasValues', 'hasValueType'];
+    }
+}
+
 exports.init = function () {
 
     Object.prototype.checkContainsKeys = checkContainsKeys;
@@ -87,5 +115,17 @@ exports.init = function () {
     Function.prototype.checkHasParamsCount = checkHasParamsCount;
 
     String.prototype.checkHasWordsCount = checkHasWordsCount;
+
+    Object.defineProperty(Object.prototype, 'check', {
+        get: function() {
+            var checkNamespace = namespace();
+
+            var functions = getMethods(this);
+            functions.forEach(function (method) {
+                checkNamespace[method] = checkNamespace[method].bind(this);
+            }, this);
+            return checkNamespace;
+        }
+    });
 
 };
