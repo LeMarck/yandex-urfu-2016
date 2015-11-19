@@ -79,12 +79,13 @@ function namespace() {
         containsValues: checkContainsValues,
         hasParamsCount: checkHasParamsCount,
         hasWordsCount: checkHasWordsCount
-    }
+    };
 }
 
 function getMethods(obj) {
     if (Object(obj) instanceof Array) {
-        return ['containsKeys', 'hasKeys', 'containsValues', 'hasValues', 'hasValueType', 'hasLength'];
+        return ['containsKeys', 'hasKeys', 'containsValues',
+                'hasValues', 'hasValueType', 'hasLength'];
     }
     if (Object(obj) instanceof String) {
         return ['hasLength', 'hasWordsCount'];
@@ -93,7 +94,8 @@ function getMethods(obj) {
         return ['hasParamsCount'];
     }
     if (Object(obj) instanceof Object) {
-        return ['containsKeys', 'hasKeys', 'containsValues', 'hasValues', 'hasValueType'];
+        return ['containsKeys', 'hasKeys', 'containsValues',
+                'hasValues', 'hasValueType'];
     }
 }
 
@@ -117,7 +119,7 @@ exports.init = function () {
     String.prototype.checkHasWordsCount = checkHasWordsCount;
 
     Object.defineProperty(Object.prototype, 'check', {
-        get: function() {
+        get: function () {
             var checkNamespace = namespace();
 
             var functions = getMethods(this);
