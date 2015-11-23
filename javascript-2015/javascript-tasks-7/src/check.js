@@ -5,12 +5,13 @@ function checkContainsKeys(keys) {
         throw TypeError(typeof this + '.checkContainsKeys(keys) is not a function');
     }
     var elements = Object.keys(this);
+    var result = true;
     keys.forEach(function (key) {
         if (elements.indexOf(key) === -1) {
-            return false;
+            result = false;
         }
     });
-    return true;
+    return result;
 }
 
 function checkHasKeys(keys) {
@@ -32,12 +33,13 @@ function checkContainsValues(values) {
     } else {
         throw TypeError(typeof this + '.checkContainsValues(values) is not a function');
     }
+    var result = true;
     values.forEach(function (value) {
         if (elements.indexOf(value) === -1) {
-            return false;
+            result = false;
         }
     });
-    return true;
+    return result;
 }
 
 function checkHasValues(values) {
@@ -73,10 +75,10 @@ function namespace() {
     return {
         containsKeys: checkContainsKeys,
         hasKeys: checkHasKeys,
-        hasValueType: checkHasValueType,
-        hasLength: checkHasLength,
         hasValues: checkHasValues,
         containsValues: checkContainsValues,
+        hasValueType: checkHasValueType,
+        hasLength: checkHasLength,
         hasParamsCount: checkHasParamsCount,
         hasWordsCount: checkHasWordsCount
     };
