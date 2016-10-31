@@ -1,6 +1,6 @@
 .DS_Store
 .git
-.idea
+.idea/
 
 *.log
 *.swp
