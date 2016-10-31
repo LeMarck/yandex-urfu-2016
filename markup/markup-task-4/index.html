@@ -1,8 +1,239 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="The New York Times Online">
+    <meta name="author" content="The New York Times">
+    <meta name="keywords" content="News, The New York Times, newspaper">
+    <title>The New York Times | Online</title>
+    <link rel="stylesheet" href="index.css" type="text/css">
+    <link rel="stylesheet" href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css">
+    <link rel="icon" href="https://static01.nyt.com/favicon.ico">
 </head>
 <body>
+    <!-- Доп. задание -->
+    <input type="checkbox" id="tools" class="tools">
+    <input type="checkbox" name="mode" id="night" class="night-mode">
+    <input type="radio" name="text-size" id="size-50" class="size-50">
+    <input type="radio" name="text-size" id="size-75" class="size-75">
+    <input type="radio" name="text-size" id="size-100" class="size-100" checked>
+    <input type="radio" name="text-size" id="size-125" class="size-125">
+    <input type="radio" name="text-size" id="size-150" class="size-150">
+    <input type="radio" name="text-font" id="normal" checked>
+    <input type="radio" name="text-font" id="handwritten" class="handwritten">
+    <input type="radio" name="text-font" id="ultra" class="ultra">
+
+    <label for="normal" title="Normal">A</label>
+    <label for="handwritten" title="Dancing Script">A</label>
+    <label for="ultra" title="Ultra">A</label>
+    <label for="night"><span class="fa fa-moon-o"></span></label>
+    <label for="size-50">50%</label>
+    <label for="size-75">75%</label>
+    <label for="size-100">100%</label>
+    <label for="size-125">125%</label>
+    <label for="size-150">150%</label>
+    <label for="tools" title="Settings"><span class="fa fa-sliders"></span></label>
+
+    <div class="newspaper-wrap">
+        <header>
+            <h1>The New York Times</h1>
+            <div class="header-date">
+                <p>Yekaterinburg, Wednesday, October 30, 2016</p>
+            </div>
+        </header>
+        <main>
+            <div class="col-2 col-separate">
+                <section>
+                    <header>
+                        <figure>
+                            <img src="https://s13.postimg.org/r1q0vczif/photo.jpg" alt="">
+                            <figcaption>
+                                Clearing a road to Mosul, Iraq, of ordnance
+                                last week, before a huge car bomb blast
+                                wounded the photographer, Bryan Denton.
+                            </figcaption>
+                        </figure>
+                        <h2>Calm, Then a Cry: ‘Car Bomb!’</h2>
+                        <span class="horizon-separate"></span>
+                        <h3>Attacked by ISIS on a Convoy’s March to Mosul</h3>
+                    </header>
+                    <article class="col-3">
+                        <p class="author">By Bryan Denton</p>
+                        <p>
+                            BAR&shy;TELLA, Ir&shy;aq — Our con&shy;voy
+                            had already been tar&shy;geted by sui&shy;cide
+                            car bombs three times, over a long day spent
+                            un&shy;der fire. So the Ir&shy;aqi forces had
+                            brought up a tank, and its main gun kept
+                            scan&shy;ning the road ahead to&shy;ward
+                            Mo&shy;sul.
+                        </p>
+                        <p>
+                            But the shouts star&shy;ted com&shy;ing
+                            from be&shy;hind us in&shy;stead, and when
+                            I turned to look, I knew right away: Here
+                            was Bomb No. 4, seem&shy;ingly out of nowhere.
+                            By the time I saw it, the vehicle was maybe
+                            70 feet away.
+                        </p>
+                        <p>
+
+                            We were with a unit of elite Ir&shy;aqi
+                            coun&shy;terter&shy;ror&shy;ism forces, who
+                            on the morn&shy;ing of Oct. 20 were mak&shy;ing
+                            their first moves in the broad&shy;er battle
+                            to take Mo&shy;sul back from the
+                            Is&shy;lam&shy;ic State.
+                        </p>
+                        <p>
+                            The com&shy;mandos’ first big
+                            ob&shy;ject&shy;ive was to sur&shy;round and
+                            clear Bar&shy;tella, a mil&shy;it&shy;ant-held
+                            town about six miles east of the out&shy;er
+                            fringes of Mo&shy;sul. Start&shy;ing out from
+                            an Ir&shy;aqi base around 5 a.m., the troops
+                            began push&shy;ing east along the main
+                            high&shy;way that links the Kur&shy;d&shy;ish
+                            re&shy;gion&shy;al cap&shy;it&shy;al, Er&shy;bil,
+                            with Mo&shy;sul.
+                        </p>
+                        <p>
+                            Un&shy;der peace&shy;ful cir&shy;cum&shy;stances,
+                            that drive would take maybe an hour and a half.
+                            But it would take the unit we were with nearly
+                            all day just to push three miles in&shy;to
+                            Is&shy;lam&shy;ic State ter&shy;rit&shy;ory to
+                            the west&shy;ern edge of Bar&shy;tella, where
+                            the troops were to cut off the Is&shy;lam&shy;ic
+                            State fight&shy;ers holed up in the town,
+                            keep&shy;ing them from es&shy;cap&shy;ing to
+                            Mo&shy;sul or be&shy;ing re&shy;in&shy;forced
+                            from there. There were bombs all along the road,
+                            and nearly every vil&shy;lage along the way would
+                            be a...
+                        </p>
+                    </article>
+                </section>
+                <section>
+                    <header>
+                        <h2>
+                            Donations to Foundation
+                            Vexed Clinton’s Top Aides
+                        </h2>
+                        <span class="horizon-separate"></span>
+                        <h3>
+                            Hacked Emails Show How Efforts to Limit
+                            Potential Conflicts Led to Infighting
+                        </h3>
+                    </header>
+                    <article class="col-2">
+                        <p class="author">
+                            By Steve Eder and Amy Chozick
+                        </p>
+                        <p>
+                            In the years be&shy;fore Hil&shy;lary
+                            Clin&shy;ton an&shy;nounced she would
+                            run again for pres&shy;id&shy;ent, her
+                            top aides ex&shy;pressed pro&shy;found
+                            con&shy;cerns in in&shy;tern&shy;al emails
+                            about how for&shy;eign dona&shy;tions to
+                            the Clin&shy;ton Found&shy;a&shy;tion and
+                            Bill Clin&shy;ton’s own money&shy;mak&shy;ing
+                            ven&shy;tures would af&shy;fect Mrs.
+                            Clin&shy;ton’s polit&shy;ic&shy;al fu&shy;ture.
+                        </p>
+                        <p>
+                            The emails, ob&shy;tained by hack&shy;ers and
+                            be&shy;ing gradu&shy;ally re&shy;leased by
+                            WikiLeaks this month, also are  re&shy;veal&shy;ing
+                            how ef&shy;forts to min&shy;im&shy;ize
+                            po&shy;ten&shy;tial con&shy;flicts at the
+                            found&shy;a&shy;tion led to power struggles
+                            and in&shy;fight&shy;ing among aides and Mrs.
+                            Clin&shy;ton’s fam&shy;ily.
+                        </p>
+                        <p>
+
+                            One top aide to Mr. Clin&shy;ton, Douglas J. Band,
+                            noted in an email that the former pres&shy;id&shy;ent
+                            had re&shy;ceived per&shy;son&shy;al in&shy;come from
+                            some found&shy;a&shy;tion donors and
+                            <q>gets many ex&shy;pens&shy;ive gifts from them.</q>
+                        </p>
+                        <p>
+                            Chelsea Clin&shy;ton ac&shy;cused her fath&shy;er’s
+                            aides of tak&shy;ing <q>sig&shy;ni&shy;fic&shy;ant sums
+                            of money from my par&shy;ents per&shy;son&shy;ally,</q>
+                            of <q>hust&shy;ling</q> dur&shy;ing found&shy;a&shy;tion
+                            events to win cli&shy;ents for their own busi&shy;ness,
+                            and of even in&shy;stalling spy&shy;ware on her chief of
+                            staff’s com&shy;puter.
+                        </p>
+                        <p>
+
+                            Hil&shy;lary Clin&shy;ton, an&shy;oth&shy;er email showed,
+                            had prom&shy;ised to at&shy;tend a Clin&shy;ton
+                            Found&shy;a&shy;tion gath&shy;er&shy;ing in Mo&shy;rocco
+                            at the be&shy;hest of its king, who had pledged $12
+                            mil&shy;lion to the char&shy;ity. Her ad&shy;visers
+                            wor&shy;ried that would look un&shy;seemly just as she
+                            was be&shy;gin&shy;ning her pres&shy;id&shy;en&shy;tial
+                            cam&shy;paign in earn&shy;est.
+                        </p>
+                        <p>
+                            <q>She cre&shy;ated this mess and she knows it,</q>
+                            a close aide, Huma Abedin, wrote of Mrs. Clin&shy;ton
+                            in a Janu&shy;ary 2015 email.
+                        </p>
+                        <p>
+                            For months, the Clin&shy;tons have de&shy;fen&shy;ded
+                            their found&shy;a&shy;tion, mak&shy;ing pub&shy;lic
+                            pro&shy;clam&shy;a&shy;tions that it went above and
+                            bey&shy;ond what the law re&shy;quired in terms of
+                            trans&shy;par&shy;ency while Mrs. Clin&shy;ton was
+                            at the State De&shy;part&shy;ment.
+                        </p>
+                        <p>
+                            The emails, which came from the ac&shy;count of
+                            John D. Podesta, who had a lead&shy;er&shy;ship
+                            role at the found&shy;a&shy;tion and is now
+                            Mrs. Clin&shy;ton’s cam&shy;paign chair&shy;man,
+                            have not con&shy;tained evid&shy;ence to
+                            sup&shy;port Re&shy;pub&shy;lic&shy;an
+                            con&shy;ten&shy;tions that Mrs. Clin&shy;ton
+                            per&shy;formed any fa&shy;vors for
+                            found&shy;a&shy;tion donors.
+                        </p>
+                        <p>
+                            But they do show pro&shy;nounced wor&shy;ries
+                            among the Clin&shy;tons’ closest ad&shy;visers
+                            about the mil&shy;lions of dol&shy;lars
+                            com&shy;ing in&shy;to the found&shy;a&shy;tion,
+                            and to Mr. Clin&shy;ton per&shy;son&shy;ally,
+                            and how they could in&shy;ocu&shy;late Mrs.
+                            Clin&shy;ton from cri&shy;ti&shy;cism over it.
+                        </p>
+                        <p>
+                            <q>Do they plan to do big events next year?</q>
+                            her cam&shy;paign man&shy;ager, Robby Mook,
+                            asked about the found&shy;a&shy;tion last year,
+                            shortly after Mrs. Clin&shy;ton kicked off her
+                            pres&shy;id&shy;en&shy;tial cam&shy;paign.
+                            <q>Pos&shy;sible for those to be smal&shy;ler
+                                and lower key in 16?</q>
+                        </p>
+                        <p>
+                            Foun&shy;ded in 1997, when Mr. Clin&shy;ton
+                            was still pres&shy;id&shy;ent, the
+                            found&shy;a&shy;tion has raised roughly
+                            $2 bil&shy;lion to fund projects around
+                            the world...
+                        </p>
+                    </article>
+                </section>
+            </div>
+        </main>
+    </div>
 </body>
 </html>

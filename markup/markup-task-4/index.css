@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script');
+@import url('https://fonts.googleapis.com/css?family=Exo');
+@import url('https://fonts.googleapis.com/css?family=Ultra');
+
+@font-face
+{
+    font-family: 'Plain Germanica';
+    src: url('fonts/plain_germanica.woff') format('woff'), url('fonts/plain_germanica.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* COLUMN */
+
+.col-2
+{
+    column-count: 2;
+}
+
+.col-3
+{
+    column-count: 3;
+}
+
+.col-separate
+{
+    column-rule: 1px solid #333;
+}
+
+/* MAIN */
+
+html
+{
+    width: 100%;
+    height: 100%;
+}
+
+body
+{
+    margin: 0;
+    font-size: 16px;
+    font-family: 'Exo', sans-serif;
+}
+
+.newspaper-wrap
+{
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    color: #333;
+}
+
+header
+{
+    padding: 0 16px;
+    overflow: hidden;
+}
+
+h1
+{
+    font-family: 'Plain Germanica', serif;
+    font-size: 3.7em;
+    font-weight: 500;
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom: 5px;
+}
+
+.header-date
+{
+    border-top: 1px solid #333;
+    border-bottom: 3px solid #333;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.header-date p
+{
+    margin: 5px 0;
+}
+
+main
+{
+    padding: 16px;
+}
+
+section header
+{
+    margin: 1.5em 0 0;
+    padding: 0;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+section header .horizon-separate
+{
+    margin: 0 30%;
+    border-bottom: 3px solid #333;
+    display: block;
+}
+
+section header h3
+{
+    font-weight: 200;
+}
+
+section article
+{
+    text-align: justify;
+}
+
+.author
+{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.author + p:first-letter
+{
+    font-family: 'Plain Germanica', serif;
+    font-size: 3.5em;
+}
+
+q
+{
+    font-weight: bold;
+    font-style: italic;
+}
+
+figure img
+{
+    width: 100%;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+figcaption
+{
+    font-size: .4em;
+    text-align: right;
+}
+
+/* TOOLS */
+
+input
+{
+    display: none;
+}
+
+label
+{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 56px;
+    height: 56px;
+    border-radius: 28px;
+    background-color: #ff6e40;
+    margin: 16px;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    z-index: 999;
+    right: 0;
+    bottom: 0;
+    visibility: hidden;
+    transition-property: transform;
+    transition-duration: .3s;
+}
+
+.tools ~ label,
+label[for='tools']
+{
+    visibility: visible;
+}
+
+.tools:checked ~ label[for='tools']
+{
+    transform: rotate(-360deg);
+}
+
+.tools:checked ~ label[for='night']
+{
+    transform: translate(-72px, -72px);
+}
+
+.tools:checked ~ label[for='size-150']
+{
+    transform: translateX(-72px);
+}
+
+.tools:checked ~ label[for='size-125']
+{
+    transform: translateX(-144px);
+}
+
+.tools:checked ~ label[for='size-100']
+{
+    transform: translateX(-216px);
+}
+
+.tools:checked ~ label[for='size-75']
+{
+    transform: translateX(-288px);
+}
+
+.tools:checked ~ label[for='size-50']
+{
+    transform: translateX(-360px);
+}
+
+.tools:checked ~ label[for='normal']
+{
+    transform: translateY(-72px);
+}
+
+.tools:checked ~ label[for='handwritten']
+{
+    transform: translateY(-144px);
+    font-family: 'Dancing Script', cursive;
+}
+
+.tools:checked ~ label[for='ultra']
+{
+    transform: translateY(-216px);
+    font-family: 'Ultra', serif;
+}
+
+.night-mode:checked ~ .newspaper-wrap
+{
+    background-color: #333;
+    color: #fff;
+}
+
+.night-mode:checked ~ .newspaper-wrap .header-date,
+.night-mode:checked ~ .newspaper-wrap .horizon-separate
+{
+    border-top: 1px solid #fff;
+    border-bottom: 3px solid #fff;
+}
+
+.night-mode:checked ~ .newspaper-wrap .col-separate
+{
+    column-rule: 1px solid #fff;
+}
+
+.size-50:checked ~ .newspaper-wrap
+{
+    font-size: .5em;
+}
+
+.size-75:checked ~ .newspaper-wrap
+{
+    font-size: .75em;
+}
+
+.size-125:checked ~ .newspaper-wrap
+{
+    font-size: 1.25em;
+}
+
+.size-150:checked ~ .newspaper-wrap
+{
+    font-size: 1.5em;
+}
+
+.handwritten:checked ~ .newspaper-wrap
+{
+    font-family: 'Dancing Script', cursive;
+}
+
+.ultra:checked ~ .newspaper-wrap
+{
+    font-family: 'Ultra', serif;
+}
