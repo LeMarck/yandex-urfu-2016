@@ -28,8 +28,8 @@
 
 .col-4
 {
-    column-count: 4;
-    -moz-column-count: 4;
+    column-count: 6;
+    -moz-column-count: 6;
 }
 
 .col-all
@@ -148,7 +148,7 @@ main
 .newspaper-news figure img
 {
     width: 100%;
-    min-width: 200px;
+    min-height: 300px;
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
 }
@@ -164,24 +164,18 @@ main
     border-top: 1px solid #333;
 }
 
-.vertical-title header
+.vertical-title
 {
     white-space: pre-line;
-    float: left;
+    display: inline-block;
+    width: 30px;
     margin: 0;
     padding: 0;
-    font-size: 1.5em;
-    text-align: center;
 }
 
-.vertical-title header h2
+figcaption.big-figcaption
 {
-    margin: 0;
-}
-
-.vertical-title article
-{
-    margin: 1.5em 0 0;
+    font-size: .8em;
 }
 
 /* TOOLS */
