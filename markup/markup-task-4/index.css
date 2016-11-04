@@ -26,12 +26,6 @@
     -moz-column-count: 3;
 }
 
-.col-4
-{
-    column-count: 6;
-    -moz-column-count: 6;
-}
-
 .col-all
 {
     column-span: all;
