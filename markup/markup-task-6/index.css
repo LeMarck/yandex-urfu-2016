@@ -266,7 +266,7 @@ input[id='page3']:checked ~ .footer .label[for='page3']
 
 input[id='page2']:checked ~ .gallery .gallery-content
 {
-    transform: translateX(-33.0%);
+    transform: translateX(-33%);
 }
 
 input[id='page3']:checked ~ .gallery .gallery-content
