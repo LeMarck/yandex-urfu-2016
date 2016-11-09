@@ -266,12 +266,12 @@ input[id='page3']:checked ~ .footer .label[for='page3']
 
 input[id='page2']:checked ~ .gallery .gallery-content
 {
-    transform: translateX(-33.2%);
+    transform: translateX(-33.0%);
 }
 
 input[id='page3']:checked ~ .gallery .gallery-content
 {
-    transform: translateX(-66.5%);
+    transform: translateX(-66.2%);
 }
 
 .arrow
