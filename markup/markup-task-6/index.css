@@ -1,0 +1,312 @@
+@font-face
+{
+    font-family: 'Yandex Sans';
+    font-weight: 600;
+    src: local('Yandex Sans');
+    src: url('fonts/Yandex-Sans-Text-Medium.ttf');
+}
+
+@font-face
+{
+    font-family: 'Yandex Sans';
+    font-weight: 400;
+    src: local('Yandex Sans');
+    src: url('fonts/Yandex-Sans-Text-Light.ttf');
+}
+
+html
+{
+    width: 100%;
+    height: 100%;
+    min-width: 500px;
+}
+
+body
+{
+    margin: 0;
+    font: 400 16px 'Yandex Sans';
+}
+
+.header
+{
+    position: relative;
+    width: 100%;
+    height: 70px;
+    border-bottom: 1px solid #eee;
+    box-shadow: 0 0 50px 10px rgba(0,0,0,.05);
+    overflow: hidden;
+}
+
+.header h1
+{
+    font-weight: 600;
+    font-size: 1.5em;
+    margin: 0;
+    padding: 20px 0 20px 50px;
+}
+
+.card-description h2:first-letter,
+.header h1:first-letter
+{
+    color: #f00;
+}
+
+.gallery
+{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.gallery-content
+{
+    width: 300%;
+    height: 100%;
+    text-align: left;
+    margin: 50px auto;
+    overflow: hidden;
+    transition-property: transform;
+    transition-duration: .99s;
+}
+
+.card
+{
+    display: inline-block;
+    width: calc(100%/12 - 15px);
+    margin: 5px;
+    vertical-align: top;
+}
+
+.card-image
+{
+    width: auto;
+    height: 200px;
+    position: relative;
+}
+
+.card-image img
+{
+    max-height: 98%;
+    max-width: 98%;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    vertical-align: middle;
+}
+
+.card-description
+{
+    display: none;
+    padding: 0 16px;
+}
+
+.card-description h2
+{
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 3px;
+}
+
+.card:hover
+{
+    box-shadow: 0 0 20px rgba(0,0,0,.5);
+}
+
+.card:hover .card-description
+{
+    display: block;
+}
+
+.view
+{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    background: rgba(20, 20, 20, .8);
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
+
+.container
+{
+    position: absolute;
+    top: 40px;
+    left: 20px;
+    right: 20px;
+    bottom: 40px;
+    text-align: center;
+}
+
+.container-wrapper
+{
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    line-height: 0;
+}
+
+.container-content
+{
+    vertical-align: middle;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    white-space: nowrap;
+}
+
+.container-content:after
+{
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.container-content img
+{
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    vertical-align: middle;
+}
+
+.close
+{
+    height: 18px;
+    stroke-width: 15;
+    width: 18px;
+    stroke: #fff;
+    position: absolute;
+    right: 0;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.container-content img,
+.view-status
+{
+    display: none;
+}
+
+.view-status:checked ~ .gallery .view
+{
+    display: block;
+}
+
+input[id='img-close']:checked ~ .gallery .view
+{
+    display: none;
+}
+
+input[id='img1']:checked ~ .gallery .view img:first-child,
+input[id='img2']:checked ~ .gallery .view img:nth-child(2),
+input[id='img3']:checked ~ .gallery .view img:nth-child(3),
+input[id='img4']:checked ~ .gallery .view img:nth-child(4),
+input[id='img5']:checked ~ .gallery .view img:nth-child(5),
+input[id='img6']:checked ~ .gallery .view img:nth-child(6),
+input[id='img7']:checked ~ .gallery .view img:nth-child(7),
+input[id='img8']:checked ~ .gallery .view img:nth-child(8),
+input[id='img9']:checked ~ .gallery .view img:nth-child(9),
+input[id='img10']:checked ~ .gallery .view img:nth-child(10),
+input[id='img11']:checked ~ .gallery .view img:nth-child(11),
+input[id='img12']:checked ~ .gallery .view img:last-child
+{
+    display: inline-block;
+}
+
+.radio-input
+{
+    display: none;
+}
+
+.footer
+{
+    position: absolute;
+    height: 50px;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+}
+
+.footer .label
+{
+    background-color: #fff;
+    height: 38px;
+    width: 38px;
+    border-radius: 19px;
+    font-size: 18px;
+    line-height: 38px;
+    display: inline-block;
+    text-align: center;
+}
+
+.footer .label:hover
+{
+    background-color: #eee;
+}
+
+input[id='page1']:checked ~ .footer .label[for='page1'],
+input[id='page2']:checked ~ .footer .label[for='page2'],
+input[id='page3']:checked ~ .footer .label[for='page3']
+{
+    background-color: #ffeba0;
+}
+
+input[id='page2']:checked ~ .gallery .gallery-content
+{
+    transform: translateX(-33.2%);
+}
+
+input[id='page3']:checked ~ .gallery .gallery-content
+{
+    transform: translateX(-66.5%);
+}
+
+.arrow
+{
+    width: 0;
+    height: 0;
+    border: 19px solid transparent;
+    position: absolute;
+    display: none;
+}
+
+.arrow-right
+{
+    border-left-color: #ffdb4d;
+    border-right: 0;
+    right: 16px;
+}
+
+.arrow-left
+{
+    border-right-color: #ffdb4d;
+    border-left: 0;
+    left: 16px;
+}
+
+input[id='page1']:checked ~ .footer .arrow-right[for='page2'],
+input[id='page2']:checked ~ .footer .arrow-left[for='page1'],
+input[id='page2']:checked ~ .footer .arrow-right[for='page3'],
+input[id='page3']:checked ~ .footer .arrow-left[for='page2']
+{
+    display: block;
+}
+
+.label,
+.arrow
+{
+    cursor: pointer;
+}
