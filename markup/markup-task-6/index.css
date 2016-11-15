@@ -26,7 +26,7 @@ body
     font: 400 16px 'Yandex Sans', sans-serif;
 }
 
-.card-description,
+.card-image figcaption,
 .pages
 {
     display: none;
@@ -50,7 +50,7 @@ body
     padding: 20px 0 20px 50px;
 }
 
-.card-description h2:first-letter,
+.card-image figcaption h2:first-letter,
 .header h1:first-letter
 {
     color: #f00;
@@ -110,20 +110,20 @@ img
     vertical-align: middle;
 }
 
-.card-description h2
+.card-image figcaption h2
 {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
-.card-description p
+.card-image figcaption p
 {
     text-align: left;
     padding: 0 8px;
 }
 
-.card:hover .card-description
+.card:hover .card-image figcaption
 {
     display: block;
 }
