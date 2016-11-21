@@ -202,10 +202,19 @@ label[for='sort']
     opacity: .4;
 }
 
+.cat-type:checked ~ .basic__content figure figcaption
+{
+    opacity: 0;
+}
+
 .abyssinian:checked ~ .basic__content .abyssinian,
+.abyssinian:checked ~ .basic__content .abyssinian figcaption,
 .russian:checked ~ .basic__content .russian,
+.russian:checked ~ .basic__content .russian figcaption,
 .british:checked ~ .basic__content .british,
-.siam:checked ~ .basic__content .siam
+.british:checked ~ .basic__content .british figcaption,
+.siam:checked ~ .basic__content .siam,
+.siam:checked ~ .basic__content .siam figcaption
 {
     opacity: 1;
 }

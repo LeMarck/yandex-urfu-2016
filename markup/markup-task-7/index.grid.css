@@ -354,10 +354,19 @@ input[id='sort-advanced']:checked ~ .advanced__rating-list .rating-4
     opacity: .4;
 }
 
+.cat-type:checked ~ .advanced__content figure figcaption
+{
+    opacity: 0;
+}
+
 .abyssinian:checked ~ .advanced__content .abyssinian,
+.abyssinian:checked ~ .advanced__content .abyssinian figcaption,
 .russian:checked ~ .advanced__content .russian,
+.russian:checked ~ .advanced__content .russian figcaption,
 .british:checked ~ .advanced__content .british,
-.siam:checked ~ .advanced__content .siam
+.british:checked ~ .advanced__content .british figcaption,
+.siam:checked ~ .advanced__content .siam,
+.siam:checked ~ .advanced__content .siam figcaption
 {
     opacity: 1;
 }
