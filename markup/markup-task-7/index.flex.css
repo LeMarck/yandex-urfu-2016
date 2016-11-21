@@ -1,0 +1,235 @@
+.basic__header
+{
+    display: flex;
+    height: 160px;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.basic__header h1
+{
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.basic__main
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cat-type
+{
+    display: none;
+}
+
+.basic__menu
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: #d9d9d9;
+    width: 210px;
+    padding: 0;
+    margin: 0 10px 23px 27px;
+}
+
+.basic__menu label
+{
+    height: 75px;
+    border-bottom: 2px ridge #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 20px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.basic__content
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 820px;
+}
+
+.basic__content figure
+{
+    width: 250px;
+    height: 300px;
+    margin: 0 auto 23px;
+    position: relative;
+}
+
+.basic__content figure img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.basic__content figure:nth-child(8n+2),
+.basic__content figure:nth-child(8n+6)
+{
+    width: 525px;
+}
+
+.basic__content figure:nth-child(8n)
+{
+    width: 800px;
+}
+
+.basic__content figure figcaption
+{
+    position: absolute;
+    bottom: 30px;
+    height: 70px;
+    background-color: rgba(0, 0, 0, .6);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.basic__content figure:hover figcaption
+{
+    display: flex;
+}
+
+.basic__rating
+{
+    width: 240px;
+    margin: 0 27px 23px 10px;
+    padding: 10px 0;
+    background: #d9d9d9;
+    align-self: flex-start;
+}
+
+.basic__rating h2
+{
+    font-size: 30px;
+    font-weight: 400;
+    color: #f00;
+    margin: 0 0 0 20px;
+    text-transform: uppercase;
+}
+
+label[for='sort']
+{
+    margin-left: 90px;
+}
+
+.basic__rating-list
+{
+    display: flex;
+    flex-direction: column;
+    margin: 0 30px 0 20px;
+}
+
+.basic__rating-item div:first-child
+{
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.basic__rating-item div:last-child
+{
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.basic__rating-line
+{
+    display: inline-block;
+    background: linear-gradient(to right, transparent 0%, white 100%);
+    border: 1px solid #aaa;
+    height: 20px;
+}
+
+.rating-10 .basic__rating-line
+{
+    width: 150px;
+    background-color: #07e871;
+}
+
+.rating-9 .basic__rating-line
+{
+    width: 135px;
+    background-color: #07e871;
+}
+
+.rating-8 .basic__rating-line
+{
+    width: 120px;
+    background-color: #fff603;
+}
+
+.rating-4 .basic__rating-line
+{
+    width: 60px;
+    background-color: #eb211c;
+}
+
+.basic__footer
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 27px;
+    border-top: 2px ridge #fff;
+    font-size: 14px;
+    margin-top: 27px;
+    font-weight: bold;
+}
+
+.basic__footer address
+{
+    color: #00f;
+}
+
+.cat-type:checked ~ .basic__content figure
+{
+    opacity: .4;
+}
+
+.abyssinian:checked ~ .basic__content .abyssinian,
+.russian:checked ~ .basic__content .russian,
+.british:checked ~ .basic__content .british,
+.siam:checked ~ .basic__content .siam
+{
+    opacity: 1;
+}
+
+.abyssinian:checked ~ .basic__menu label[for='abyssinian'],
+.russian:checked ~ .basic__menu label[for='russian'],
+.british:checked ~ .basic__menu label[for='british'],
+.siam:checked ~ .basic__menu label[for='siam'],
+.basic__menu label:hover
+{
+    background: #5a5a5a;
+    color: #fff;
+}
+
+input[id='sort']:checked ~ .basic__rating-list .rating-9
+{
+    order: 1;
+}
+
+input[id='sort']:checked ~ .basic__rating-list .rating-8
+{
+    order: 2;
+}
+
+input[id='sort']:checked ~ .basic__rating-list .rating-4
+{
+    order: 3;
+}
