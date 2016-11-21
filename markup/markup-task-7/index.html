@@ -2,7 +2,129 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Бабуленькины котятки">
+    <meta name="author" content="Внучок">
+    <meta name="keywords" content="Бабуленькины, котятки">
+    <title>Бабуленькины котятки</title>
+    <link rel="stylesheet" href="index.css" type="text/css">
 </head>
 <body>
+    <header class="base__header">
+        <h1>Бабуленькины котятки</h1>
+    </header>
+    <main class="base__main">
+        <input type="checkbox" id="abyssinian" class="cat-type abyssinian">
+        <input type="checkbox" id="british" class="cat-type british">
+        <input type="checkbox" id="russian" class="cat-type russian">
+        <input type="checkbox" id="siam" class="cat-type siam">
+        <menu class="base__menu">
+            <label for="abyssinian">Абиссинская</label>
+            <label for="british">Британская</label>
+            <label for="russian">Русская голубая</label>
+            <label for="siam">Сиамская</label>
+        </menu>
+        <section class="base__content">
+            <figure class="british">
+                <img src="img/british1.jpg" alt="Гоша" title="Гоша, 4 года">
+                <figcaption>
+                    Гоша, 4 года
+                </figcaption>
+            </figure>
+            <figure class="abyssinian">
+                <img src="img/abyssinian.jpg" alt="Маша" title="Маша, 2 года">
+                <figcaption>
+                    Маша, 2 года
+                </figcaption>
+            </figure>
+            <figure class="russian">
+                <img src="img/russian1.jpg" alt="Карл" title="Карл, 3 года">
+                <figcaption>
+                    Карл, 3 года
+                </figcaption>
+            </figure>
+            <figure class="siam">
+                <img src="img/siam2.jpg" alt="Саша" title="Саша, 2 года">
+                <figcaption>
+                    Саша, 2 года
+                </figcaption>
+            </figure>
+            <figure class="british">
+                <img src="img/british2.jpg" alt="Том" title="Том, 1 года">
+                <figcaption>
+                    Том, 1 года
+                </figcaption>
+            </figure>
+            <figure class="siam">
+                <img src="img/siam1.jpg" alt="Мира" title="Мира, 3 года">
+                <figcaption>
+                    Мира, 3 года
+                </figcaption>
+            </figure>
+            <figure class="russian">
+                <img src="img/russian2.jpg" alt="Лиля" title="Лиля, 1 года">
+                <figcaption>
+                    Лиля, 1 года
+                </figcaption>
+            </figure>
+            <figure class="russian">
+                <img src="img/russian3.jpg" alt="Марти" title="Марти, 3 года">
+                <figcaption>
+                    Марти, 3 года
+                </figcaption>
+            </figure>
+        </section>
+        <aside class="base__rating">
+            <h2>Рейтинг</h2>
+            <label for="sort">по убыванию</label>
+            <input type="checkbox" id="sort">
+            <div class="base__rating-list">
+                <div class="base__rating-item rating-9">
+                    <div>
+                        Абиссинская
+                    </div>
+                    <div>
+                        <div class="base__rating-line"></div>
+                        9
+                    </div>
+                </div>
+                <div class="base__rating-item rating-8">
+                    <div>
+                        Британская
+                    </div>
+                    <div>
+                        <div class="base__rating-line"></div>
+                        8
+                    </div>
+                </div>
+                <div class="base__rating-item rating-10">
+                    <div>
+                        Русская голубая
+                    </div>
+                    <div>
+                        <div class="base__rating-line"></div>
+                        10
+                    </div>
+                </div>
+                <div class="base__rating-item rating-4">
+                    <div>
+                        Сиамская
+                    </div>
+                    <div>
+                        <div class="base__rating-line"></div>
+                        4
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </main>
+    <footer class="base__footer">
+            <span class="copyright">
+                &copy; OOO Бабуленькины котятки, 2016
+            </span>
+        <address>
+            Нащ адрес: улица Котовая, д.5
+        </address>
+    </footer>
 </body>
 </html>
