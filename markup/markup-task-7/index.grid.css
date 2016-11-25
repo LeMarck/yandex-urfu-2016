@@ -2,7 +2,8 @@
 {
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 160px auto 50px 68px;
+    grid-template-rows: 160px auto auto 50px 68px;
+    min-height: 100%;
 }
 
 .advanced__header
@@ -253,7 +254,7 @@ label[for='sort-advanced']
     grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 2;
-    background: linear-gradient(to right, transparent 0%, white 100%);
+    background: linear-gradient(to right, transparent 0%, #fff 100%);
     border: 1px solid #aaa;
     height: 20px;
 }
@@ -286,8 +287,8 @@ label[for='sort-advanced']
 {
     grid-column-start: 1;
     grid-column-end: 2;
-    grid-row-start: 4;
-    grid-row-end: 5;
+    grid-row-start: 5;
+    grid-row-end: 6;
     display: grid;
     grid-template-columns: auto auto auto;
     grid-template-rows: auto;
