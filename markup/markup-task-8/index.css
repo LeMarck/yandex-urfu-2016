@@ -1,0 +1,558 @@
+html,
+body
+{
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #fafafa;
+    font-family: Arial, sans-serif;
+}
+
+.gallery
+{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+input[name='card-select'],
+input[name='card-info']
+{
+    display: none;
+}
+
+.cards
+{
+    transform-style: preserve-3d;
+    width: 100%;
+    text-align: center;
+}
+
+.cards .card
+{
+    position: relative;
+    display: inline-flex;
+    width: 13%;
+    height: 120px;
+    transition: transform .9s;
+    box-shadow: 0 16px 32px rgba(60, 63, 65, .78);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+}
+
+.card img
+{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transition: opacity .5s;
+    transform-style: preserve-3d;
+}
+
+/* Transformation */
+
+/* card-1 */
+
+.card-1:checked ~ .cards .card-1
+{
+    transform: rotateY(0deg) scale(1.5) translateX(205%);
+}
+
+.card-1:checked ~ .cards .card-2
+{
+    transform: translateX(285%) perspective(300px)
+        rotateY(-40deg) translateZ(-40px);
+}
+
+.card-1:checked ~ .cards .card-3
+{
+    transform: translateX(255%) perspective(300px)
+        rotateY(-35deg) translateZ(-40px);
+}
+
+.card-1:checked ~ .cards .card-4
+{
+    transform: translateX(215%) perspective(300px)
+        rotateY(-30deg) translateZ(-40px);
+}
+
+.card-1:checked ~ .cards .card-5
+{
+    transform: translateX(155%) perspective(300px)
+        rotateY(-25deg) translateZ(-40px);
+}
+
+.card-1:checked ~ .cards .card-6
+{
+    transform: translateX(85%) perspective(300px)
+        rotateY(-20deg) translateZ(-40px);
+}
+
+.card-1:checked ~ .cards .card-7
+{
+    transform: translateX(5%) perspective(300px)
+        rotateY(-15deg) translateZ(-40px);
+}
+
+/* card-7 */
+
+.card-7:checked ~ .cards .card-7
+{
+    transform: rotateY(0deg) scale(1.5) translateX(-205%);
+}
+
+.card-7:checked ~ .cards .card-6
+{
+    transform: translateX(-285%) perspective(300px)
+        rotateY(40deg) translateZ(-40px);
+}
+
+.card-7:checked ~ .cards .card-5
+{
+    transform: translateX(-255%) perspective(300px)
+        rotateY(35deg) translateZ(-40px);
+}
+
+.card-7:checked ~ .cards .card-4
+{
+    transform: translateX(-215%) perspective(300px)
+        rotateY(30deg) translateZ(-40px);
+}
+
+.card-7:checked ~ .cards .card-3
+{
+    transform: translateX(-155%) perspective(300px)
+        rotateY(25deg) translateZ(-40px);
+}
+
+.card-7:checked ~ .cards .card-2
+{
+    transform: translateX(-85%) perspective(300px)
+        rotateY(20deg) translateZ(-40px);
+}
+
+.card-7:checked ~ .cards .card-1
+{
+    transform: translateX(-5%) perspective(300px)
+        rotateY(15deg) translateZ(-40px);
+}
+
+/* card-2 */
+
+.card-2:checked ~ .cards .card-1
+{
+    transform: translateX(225%) perspective(300px)
+        rotateY(40deg) translateZ(-40px);
+}
+
+.card-2:checked ~ .cards .card-2
+{
+    transform: rotateY(0deg) scale(1.5) translateX(135%);
+}
+
+.card-2:checked ~ .cards .card-3
+{
+    transform: translateX(185%) perspective(300px)
+        rotateY(-40deg) translateZ(-40px);
+}
+
+.card-2:checked ~ .cards .card-4
+{
+    transform: translateX(155%) perspective(300px)
+        rotateY(-35deg) translateZ(-40px);
+}
+
+.card-2:checked ~ .cards .card-5
+{
+    transform: translateX(115%) perspective(300px)
+        rotateY(-30deg) translateZ(-40px);
+}
+
+.card-2:checked ~ .cards .card-6
+{
+    transform: translateX(55%) perspective(300px)
+        rotateY(-25deg) translateZ(-40px);
+}
+
+.card-2:checked ~ .cards .card-7
+{
+    transform: translateX(-25%) perspective(300px)
+        rotateY(-20deg) translateZ(-40px);
+}
+
+/* card-6 */
+
+.card-6:checked ~ .cards .card-7
+{
+    transform: translateX(-225%) perspective(300px)
+        rotateY(-40deg) translateZ(-40px);
+}
+
+.card-6:checked ~ .cards .card-6
+{
+    transform: rotateY(0deg) scale(1.5) translateX(-135%);
+}
+
+.card-6:checked ~ .cards .card-5
+{
+    transform: translateX(-185%) perspective(300px)
+        rotateY(40deg) translateZ(-40px);
+}
+
+.card-6:checked ~ .cards .card-4
+{
+    transform: translateX(-155%) perspective(300px)
+        rotateY(35deg) translateZ(-40px);
+}
+
+.card-6:checked ~ .cards .card-3
+{
+    transform: translateX(-115%) perspective(300px)
+        rotateY(30deg) translateZ(-40px);
+}
+
+.card-6:checked ~ .cards .card-2
+{
+    transform: translateX(-55%) perspective(300px)
+        rotateY(25deg) translateZ(-40px);
+}
+
+.card-6:checked ~ .cards .card-1
+{
+    transform: translateX(25%) perspective(300px)
+        rotateY(20deg) translateZ(-40px);
+}
+
+/* card-3 */
+
+.card-3:checked ~ .cards .card-1
+{
+    transform: translateX(152%) perspective(300px)
+        rotateY(35deg) translateZ(-40px);
+}
+
+.card-3:checked ~ .cards .card-2
+{
+    transform: translateX(122%) perspective(300px)
+        rotateY(40deg) translateZ(-40px);
+}
+
+.card-3:checked ~ .cards .card-3
+{
+    transform: rotateY(0deg) scale(1.5) translateX(68%);
+}
+
+.card-3:checked ~ .cards .card-4
+{
+    transform: translateX(82%) perspective(300px)
+        rotateY(-40deg) translateZ(-40px);
+}
+
+.card-3:checked ~ .cards .card-5
+{
+    transform: translateX(52%) perspective(300px)
+        rotateY(-35deg) translateZ(-40px);
+}
+
+.card-3:checked ~ .cards .card-6
+{
+    transform: translateX(12%) perspective(300px)
+        rotateY(-30deg) translateZ(-40px);
+}
+
+.card-3:checked ~ .cards .card-7
+{
+    transform: translateX(-52%) perspective(300px)
+        rotateY(-25deg) translateZ(-40px);
+}
+
+/* card-5 */
+
+.card-5:checked ~ .cards .card-7
+{
+    transform: translateX(-152%) perspective(300px)
+        rotateY(-35deg) translateZ(-40px);
+}
+
+.card-5:checked ~ .cards .card-6
+{
+    transform: translateX(-122%) perspective(300px)
+        rotateY(-40deg) translateZ(-40px);
+}
+
+.card-5:checked ~ .cards .card-5
+{
+    transform: rotateY(0deg) scale(1.5) translateX(-68%);
+}
+
+.card-5:checked ~ .cards .card-4
+{
+    transform: translateX(-82%) perspective(300px)
+        rotateY(40deg) translateZ(-40px);
+}
+
+.card-5:checked ~ .cards .card-3
+{
+    transform: translateX(-52%) perspective(300px)
+        rotateY(35deg) translateZ(-40px);
+}
+
+.card-5:checked ~ .cards .card-2
+{
+    transform: translateX(-12%) perspective(300px)
+        rotateY(30deg) translateZ(-40px);
+}
+
+.card-5:checked ~ .cards .card-1
+{
+    transform: translateX(52%) perspective(300px)
+        rotateY(25deg) translateZ(-40px);
+}
+
+/* card-4 */
+
+.card-4:checked ~ .cards .card-1
+{
+    transform: translateX(90%) perspective(300px)
+        rotateY(30deg) translateZ(-40px);
+}
+
+.card-4:checked ~ .cards .card-2
+{
+    transform: translateX(50%) perspective(300px)
+        rotateY(35deg) translateZ(-40px);
+}
+
+.card-4:checked ~ .cards .card-3
+{
+    transform: translateX(20%) perspective(300px)
+        rotateY(40deg) translateZ(-40px);
+}
+
+.card-4:checked ~ .cards .card-4
+{
+    transform: rotateY(0deg) scale(1.5);
+}
+
+.card-4:checked ~ .cards .card-5
+{
+    transform: translateX(-20%) perspective(300px)
+        rotateY(-40deg) translateZ(-40px);
+}
+
+.card-4:checked ~ .cards .card-6
+{
+    transform: translateX(-50%) perspective(300px)
+        rotateY(-35deg) translateZ(-40px);
+}
+
+.card-4:checked ~ .cards .card-7
+{
+    transform: translateX(-90%) perspective(300px)
+        rotateY(-30deg) translateZ(-40px);
+}
+
+/* Hover */
+
+.card figcaption
+{
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    justify-content: center;
+    text-transform: uppercase;
+    background: rgba(0, 0, 0, .5);
+    display: none;
+}
+
+.card figcaption label
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    border: 3px solid #fafafa;
+    border-radius: 50%;
+    margin: 0 auto;
+    color: #fafafa;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.card-1:checked ~ .cards .card-1:hover figcaption,
+.card-2:checked ~ .cards .card-2:hover figcaption,
+.card-3:checked ~ .cards .card-3:hover figcaption,
+.card-4:checked ~ .cards .card-4:hover figcaption,
+.card-5:checked ~ .cards .card-5:hover figcaption,
+.card-6:checked ~ .cards .card-6:hover figcaption,
+.card-7:checked ~ .cards .card-7:hover figcaption
+{
+    display: flex;
+}
+
+.card-1:checked ~ .card-1:checked ~ .cards .card-1
+{
+    transform: scale(1.5) perspective(200px) translateX(205%) scale(1.5);
+}
+
+.card-2:checked ~ .card-2:checked ~ .cards .card-2
+{
+    transform: scale(1.5) perspective(200px) translateX(135%) scale(1.5);
+}
+
+.card-3:checked ~ .card-3:checked ~ .cards .card-3
+{
+    transform: scale(1.5) perspective(200px) translateX(68%) scale(1.5);
+}
+
+.card-4:checked ~ .card-4:checked ~ .cards .card-4
+{
+    transform: scale(1.5) perspective(200px) scale(1.5);
+}
+
+.card-5:checked ~ .card-5:checked ~ .cards .card-5
+{
+    transform: scale(1.5) perspective(200px) translateX(-68%) scale(1.5);
+}
+
+.card-6:checked ~ .card-6:checked ~ .cards .card-6
+{
+    transform: scale(1.5) perspective(200px) translateX(-135%) scale(1.5);
+}
+
+.card-7:checked ~ .card-7:checked ~ .cards .card-7
+{
+    transform: scale(1.5) perspective(200px) translateX(-205%) scale(1.5);
+}
+
+.card-1:checked ~ .card-1:checked ~ .cards .card-1 img,
+.card-2:checked ~ .card-2:checked ~ .cards .card-2 img,
+.card-3:checked ~ .card-3:checked ~ .cards .card-3 img,
+.card-4:checked ~ .card-4:checked ~ .cards .card-4 img,
+.card-5:checked ~ .card-5:checked ~ .cards .card-5 img,
+.card-6:checked ~ .card-6:checked ~ .cards .card-6 img,
+.card-7:checked ~ .card-7:checked ~ .cards .card-7 img
+{
+    opacity: 0;
+}
+
+/* Recipe */
+
+.recipe
+{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(1, 1, 1, .5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity .5s .5s, visibility .5s .5s;
+    visibility: hidden;
+}
+
+.card-1:checked ~ .card-1:checked ~ .recipes .card-1,
+.card-2:checked ~ .card-2:checked ~ .recipes .card-2,
+.card-3:checked ~ .card-3:checked ~ .recipes .card-3,
+.card-4:checked ~ .card-4:checked ~ .recipes .card-4,
+.card-5:checked ~ .card-5:checked ~ .recipes .card-5,
+.card-6:checked ~ .card-6:checked ~ .recipes .card-6,
+.card-7:checked ~ .card-7:checked ~ .recipes .card-7
+{
+    visibility: visible;
+    opacity: 1;
+}
+
+.info
+{
+    width: 45%;
+    height: 400px;
+    background: #fff;
+    margin: 0 auto;
+    visibility: hidden;
+    position: relative;
+}
+
+.card-1:checked ~ .card-1:checked ~ .recipes .card-1 .info,
+.card-2:checked ~ .card-2:checked ~ .recipes .card-2 .info,
+.card-3:checked ~ .card-3:checked ~ .recipes .card-3 .info,
+.card-4:checked ~ .card-4:checked ~ .recipes .card-4 .info,
+.card-5:checked ~ .card-5:checked ~ .recipes .card-5 .info,
+.card-6:checked ~ .card-6:checked ~ .recipes .card-6 .info,
+.card-7:checked ~ .card-7:checked ~ .recipes .card-7 .info
+{
+    visibility: visible;
+}
+
+label[for='close']
+{
+    position: absolute;
+    top: 0;
+    right: 5px;
+    font-size: 30px;
+}
+
+.info header
+{
+    margin: 20px 20px 10px;
+}
+
+.info h2
+{
+    margin: 0;
+    font-weight: 400;
+    border-bottom: 2px solid #aaa;
+    color: #aaa;
+    font-size: 50px;
+}
+
+.info section
+{
+    display: flex;
+    align-items: flex-start;
+    font-weight: 200;
+    font-size: 14px;
+}
+
+.manual
+{
+    flex-basis: 60%;
+}
+
+.ingredients
+{
+    flex-basis: 40%;
+}
+
+.manual h6,
+.ingredients h6
+{
+    font-size: 1em;
+    margin: 2em 24px 1em;
+}
+
+.manual li,
+.ingredients li
+{
+    padding: 4px 16px 4px 0;
+}
+
+.ingredients li
+{
+    font-style: italic;
+}
