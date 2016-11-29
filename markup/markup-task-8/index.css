@@ -4,6 +4,7 @@ body
     margin: 0;
     height: 100%;
     width: 100%;
+    min-width: 640px;
     background-color: #fafafa;
     font-family: Arial, sans-serif;
 }
@@ -15,10 +16,6 @@ body
     display: flex;
     flex-direction: column;
     justify-content: center;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
 }
 
 input[name='card-select'],
@@ -29,22 +26,25 @@ input[name='card-info']
 
 .cards
 {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
     transform-style: preserve-3d;
     width: 100%;
     text-align: center;
+    display: flex;
+    justify-content: center;
 }
 
 .cards .card
 {
     position: relative;
-    display: inline-flex;
-    width: 13%;
+    display: flex;
+    width: 180px;
     height: 120px;
-    transition: transform .9s;
+    transition: transform .9s, opacity .5s;
     box-shadow: 0 16px 32px rgba(60, 63, 65, .78);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     margin: 0;
 }
 
@@ -53,8 +53,6 @@ input[name='card-info']
     object-fit: cover;
     width: 100%;
     height: 100%;
-    transition: opacity .5s;
-    transform-style: preserve-3d;
 }
 
 /* Transformation */
@@ -404,53 +402,68 @@ input[name='card-info']
 
 .card-1:checked ~ .card-1:checked ~ .cards .card-1
 {
-    transform: scale(1.5) perspective(200px) translateX(205%) scale(1.5);
+    transform: scale(1.5) translateX(205%) rotateX(-90deg) scale(1.5);
 }
 
 .card-2:checked ~ .card-2:checked ~ .cards .card-2
 {
-    transform: scale(1.5) perspective(200px) translateX(135%) scale(1.5);
+    transform: scale(1.5) translateX(135%) rotateX(-90deg) scale(1.5);
 }
 
 .card-3:checked ~ .card-3:checked ~ .cards .card-3
 {
-    transform: scale(1.5) perspective(200px) translateX(68%) scale(1.5);
+    transform: scale(1.5) translateX(68%) rotateX(-90deg) scale(1.5);
 }
 
 .card-4:checked ~ .card-4:checked ~ .cards .card-4
 {
-    transform: scale(1.5) perspective(200px) scale(1.5);
+    transform: scale(1.5) rotateX(-90deg) scale(1.5);
 }
 
 .card-5:checked ~ .card-5:checked ~ .cards .card-5
 {
-    transform: scale(1.5) perspective(200px) translateX(-68%) scale(1.5);
+    transform: scale(1.5) translateX(-68%) rotateX(-90deg) scale(1.5);
 }
 
 .card-6:checked ~ .card-6:checked ~ .cards .card-6
 {
-    transform: scale(1.5) perspective(200px) translateX(-135%) scale(1.5);
+    transform: scale(1.5) translateX(-135%) rotateX(-90deg) scale(1.5);
 }
 
 .card-7:checked ~ .card-7:checked ~ .cards .card-7
 {
-    transform: scale(1.5) perspective(200px) translateX(-205%) scale(1.5);
+    transform: scale(1.5) translateX(-205%) rotateX(-90deg) scale(1.5);
 }
 
-.card-1:checked ~ .card-1:checked ~ .cards .card-1 img,
-.card-2:checked ~ .card-2:checked ~ .cards .card-2 img,
-.card-3:checked ~ .card-3:checked ~ .cards .card-3 img,
-.card-4:checked ~ .card-4:checked ~ .cards .card-4 img,
-.card-5:checked ~ .card-5:checked ~ .cards .card-5 img,
-.card-6:checked ~ .card-6:checked ~ .cards .card-6 img,
-.card-7:checked ~ .card-7:checked ~ .cards .card-7 img
+.card-1:checked ~ .card-1:checked ~ .cards .card-1,
+.card-2:checked ~ .card-2:checked ~ .cards .card-2,
+.card-3:checked ~ .card-3:checked ~ .cards .card-3,
+.card-4:checked ~ .card-4:checked ~ .cards .card-4,
+.card-5:checked ~ .card-5:checked ~ .cards .card-5,
+.card-6:checked ~ .card-6:checked ~ .cards .card-6,
+.card-7:checked ~ .card-7:checked ~ .cards .card-7
 {
+    transition: transform .9s, opacity .5s;
     opacity: 0;
 }
 
 /* Recipe */
 
-.recipe
+.recipes
+{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.close-background
 {
     position: fixed;
     left: 0;
@@ -458,14 +471,31 @@ input[name='card-info']
     width: 100%;
     height: 100%;
     background: rgba(1, 1, 1, .5);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+}
+
+.recipes,
+.close-background,
+.recipe
+{
     opacity: 0;
-    transition: opacity .5s .5s, visibility .5s .5s;
+    transition: opacity .5s, visibility .5s;
     visibility: hidden;
 }
 
+.card-1:checked ~ .card-1:checked ~ .recipes,
+.card-2:checked ~ .card-2:checked ~ .recipes,
+.card-3:checked ~ .card-3:checked ~ .recipes,
+.card-4:checked ~ .card-4:checked ~ .recipes,
+.card-5:checked ~ .card-5:checked ~ .recipes,
+.card-6:checked ~ .card-6:checked ~ .recipes,
+.card-7:checked ~ .card-7:checked ~ .recipes,
+.card-1:checked ~ .card-1:checked ~ .recipes .close-background,
+.card-2:checked ~ .card-2:checked ~ .recipes .close-background,
+.card-3:checked ~ .card-3:checked ~ .recipes .close-background,
+.card-4:checked ~ .card-4:checked ~ .recipes .close-background,
+.card-5:checked ~ .card-5:checked ~ .recipes .close-background,
+.card-6:checked ~ .card-6:checked ~ .recipes .close-background,
+.card-7:checked ~ .card-7:checked ~ .recipes .close-background,
 .card-1:checked ~ .card-1:checked ~ .recipes .card-1,
 .card-2:checked ~ .card-2:checked ~ .recipes .card-2,
 .card-3:checked ~ .card-3:checked ~ .recipes .card-3,
@@ -474,18 +504,21 @@ input[name='card-info']
 .card-6:checked ~ .card-6:checked ~ .recipes .card-6,
 .card-7:checked ~ .card-7:checked ~ .recipes .card-7
 {
+    transition: opacity .5s .5s, visibility .5s .5s;
     visibility: visible;
     opacity: 1;
 }
 
 .info
 {
-    width: 45%;
+    width: 600px;
     height: 400px;
     background: #fff;
     margin: 0 auto;
     visibility: hidden;
     position: relative;
+    transition: transform .9s, visibility .5s;
+    transform: rotateX(90deg);
 }
 
 .card-1:checked ~ .card-1:checked ~ .recipes .card-1 .info,
@@ -496,6 +529,8 @@ input[name='card-info']
 .card-6:checked ~ .card-6:checked ~ .recipes .card-6 .info,
 .card-7:checked ~ .card-7:checked ~ .recipes .card-7 .info
 {
+    transition: transform .5s .5s;
+    transform: rotateX(0deg) perspective(600px);
     visibility: visible;
 }
 
