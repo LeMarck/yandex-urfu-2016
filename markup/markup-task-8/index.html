@@ -2,7 +2,6 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=640">
     <meta name="description" content="айБабулька">
     <meta name="author" content="Внучок">
     <meta name="keywords" content="айБабулька, 3d, галерея">
@@ -10,347 +9,356 @@
     <link rel="stylesheet" href="index.css" type="text/css">
 </head>
 <body>
-<main class="gallery">
-    <input type="radio" id="card-1" name="card-select" class="card-1">
-    <input type="radio" id="card-2" name="card-select" class="card-2">
-    <input type="radio" id="card-3" name="card-select" class="card-3">
-    <input type="radio" id="card-4" name="card-select" class="card-4" checked>
-    <input type="radio" id="card-5" name="card-select" class="card-5">
-    <input type="radio" id="card-6" name="card-select" class="card-6">
-    <input type="radio" id="card-7" name="card-select" class="card-7">
-    <input type="radio" id="close" name="card-info">
-    <input type="radio" id="card-1-info" name="card-info" class="card-1">
-    <input type="radio" id="card-2-info" name="card-info" class="card-2">
-    <input type="radio" id="card-3-info" name="card-info" class="card-3">
-    <input type="radio" id="card-4-info" name="card-info" class="card-4">
-    <input type="radio" id="card-5-info" name="card-info" class="card-5">
-    <input type="radio" id="card-6-info" name="card-info" class="card-6">
-    <input type="radio" id="card-7-info" name="card-info" class="card-7">
-    <section class="cards">
-        <figure class="card card-1">
+<main class="cards">
+    <input type="radio" name="cards" id="card-1" class="card-1">
+    <input type="radio" name="cards" id="card-2" class="card-2">
+    <input type="radio" name="cards" id="card-3" class="card-3">
+    <input type="radio" name="cards" id="card-4" class="card-4" checked>
+    <input type="radio" name="cards" id="card-5" class="card-5">
+    <input type="radio" name="cards" id="card-6" class="card-6">
+    <input type="radio" name="cards" id="card-7" class="card-7">
+    <section class="card card-1" id="apple">
+        <section class="recipe">
+            <a href="#" class="close">✕</a>
+            <header class="recipe-header">
+                <figure>
+                    <img src="img/apple-recipe.jpg" alt="Шарлотка" title="Шарлотка">
+                    <figcaption>Яблочная шарлотка</figcaption>
+                </figure>
+            </header>
+            <article class="recipe-content">
+                <div class="ingredients">
+                    Ингредиенты
+                    <ul>
+                        <li>Яблоки - 4-5шт</li>
+                        <li>Яйца - 4-5 шт</li>
+                        <li>Мука - 1 стакан</li>
+                        <li>Сахар - 1 стакан</li>
+                        <li>Разрыхлитель  - 1 ложка</li>
+                        <li>Белок яичный  - 1 шт</li>
+                        <li>Крупа манная  - 1 ложка</li>
+                    </ul>
+                </div>
+                <div class="manual">
+                    Инструкция
+                    <ol>
+                        <li>
+                            Яблоки нарезаем тонкими дольками и складываем в миску
+                        </li>
+                        <li>
+                            Яйца и взбиваем их в пышную пену
+                        </li>
+                        <li>
+                            В массу всыпаем муку и аккуратно перемешиваем тесто
+                        </li>
+                        <li>
+                            Выкладываем слой нарезанных яблок
+                        </li>
+                        <li>
+                            Полученная шарлотка выпекается около 35-40 минут при 180 градусах
+                        </li>
+                    </ol>
+                </div>
+            </article>
+        </section>
+        <figure class="image">
             <label for="card-1">
                 <img src="img/apple.jpg" alt="Яблоко" title="Яблоко">
             </label>
             <figcaption>
-                <label for="card-1-info">Рецепт</label>
+                <a href="#apple" class="link">Рецепт</a>
             </figcaption>
         </figure>
-        <figure class="card card-2">
+    </section>
+    <section class="card card-2" id="apricot">
+        <section class="recipe">
+            <a href="#" class="close">✕</a>
+            <header class="recipe-header">
+                <figure>
+                    <img src="img/apricot-recipe.jpg" alt="Варенье" title="Варенье">
+                    <figcaption>Варенье из абрикосов</figcaption>
+                </figure>
+            </header>
+            <article class="recipe-content">
+                <div class="ingredients">
+                    Ингредиенты
+                    <ul>
+                        <li>Абрикосов - 900г</li>
+                        <li>Сахара - 900г</li>
+                    </ul>
+                </div>
+                <div class="manual">
+                    Инструкция
+                    <ol>
+                        <li>Абрикосы моем</li>
+                        <li>
+                            Разламываем напополам или же
+                            разрезаем для изъятия косточек
+                        </li>
+                        <li>
+                            В глубокую емкость переносим плоды,
+                            засыпаем сахаром
+                        </li>
+                        <li>
+                            Быстро кипятим содержимое емкости 1 минуту
+                        </li>
+                        <li>
+                            Выдерживаем в прохладном месте примерно
+                            12 часов – пока плоды не пустят сок
+                        </li>
+                        <li>Оставляем без нагрева на 11 часов</li>
+                    </ol>
+                </div>
+            </article>
+        </section>
+        <figure class="image">
             <label for="card-2">
                 <img src="img/apricot.jpg" alt="Абрикос" title="Абрикос">
             </label>
             <figcaption>
-                <label for="card-2-info">Рецепт</label>
+                <a href="#apricot" class="link">Рецепт</a>
             </figcaption>
         </figure>
-        <figure class="card card-3">
+    </section>
+    <section class="card card-3" id="banana">
+        <section class="recipe">
+            <a href="#" class="close">✕</a>
+            <header class="recipe-header">
+                <figure>
+                    <img src="img/banana-recipe.jpg" alt="Пудинг" title="Пудинг">
+                    <figcaption>Банановый пудинг</figcaption>
+                </figure>
+            </header>
+            <article class="recipe-content">
+                <div class="ingredients">
+                    Ингредиенты
+                    <ul>
+                        <li>Бананы - 350г</li>
+                        <li>Белое вино - 50г</li>
+                        <li>Манка - 2ст.л</li>
+                        <li>Яйцо - 2-3шт</li>
+                        <li>Молока - 1 стакан</li>
+                    </ul>
+                </div>
+                <div class="manual">
+                    Инструкция
+                    <ol>
+                        <li>
+                            Сварите манную кашу на молоке, соедините
+                            с желтками, растертыми с сахаром
+                        </li>
+                        <li>
+                            Измельчите бананы до пюреобразной массы,
+                            смешайте с вином, соком лимона, измельченной
+                            цедры, взбитыми белками, добавьте смесь в
+                            манную кашу, снова перемешайте
+                        </li>
+                        <li>
+                            Разложите массу по смазанным формам, запеките
+                        </li>
+                    </ol>
+                </div>
+            </article>
+        </section>
+        <figure class="image">
             <label for="card-3">
                 <img src="img/banana.jpg" alt="Банан" title="Банан">
             </label>
             <figcaption>
-                <label for="card-3-info">Рецепт</label>
+                <a href="#banana" class="link">Рецепт</a>
             </figcaption>
         </figure>
-        <figure class="card card-4">
+    </section>
+    <section class="card card-4" id="cherry">
+        <section class="recipe">
+            <a href="#" class="close">✕</a>
+            <header class="recipe-header">
+                <figure>
+                    <img src="img/cherry-recipe.jpg" alt="Компот" title="Компот">
+                    <figcaption>Компот из вишни</figcaption>
+                </figure>
+            </header>
+            <article class="recipe-content">
+                <div class="ingredients">
+                    Ингредиенты
+                    <ul>
+                        <li>Вишня - 500г</li>
+                        <li>Вода - 1л</li>
+                        <li>Сахар - 7-8ст.л</li>
+                        <li>Лимонная кислота - 1-1,5г</li>
+                    </ul>
+                </div>
+                <div class="manual">
+                    Инструкция
+                    <ol>
+                        <li>Косточки оставляем</li>
+                        <li>
+                            Доведем воду до кипения и добавим
+                            сахар и лимонную кислоту
+                        </li>
+                        <li>
+                            Доводим сироп до кипения и
+                            выкладываем в него ягоды
+                        </li>
+                        <li>
+                            Доводим компот из вишни до
+                            кипения и выключаем огонь
+                        </li>
+                        <li>
+                            Кастрюлю следует накрыть крышкой
+                            и оставить до полного остывания
+                        </li>
+                    </ol>
+                </div>
+            </article>
+        </section>
+        <figure class="image">
             <label for="card-4">
                 <img src="img/cherry.jpg" alt="Вишня" title="Вишня">
             </label>
             <figcaption>
-                <label for="card-4-info">Рецепт</label>
+                <a href="#cherry" class="link">Рецепт</a>
             </figcaption>
         </figure>
-        <figure class="card card-5">
+    </section>
+    <section class="card card-5" id="drain">
+        <section class="recipe">
+            <a href="#" class="close">✕</a>
+            <header class="recipe-header">
+                <figure>
+                    <img src="img/drain-recipe.jpg" alt="Джем" title="Джем">
+                    <figcaption>Джем из слив</figcaption>
+                </figure>
+            </header>
+            <article class="recipe-content">
+                <div class="ingredients">
+                    Ингредиенты
+                    <ul>
+                        <li>Слива - 2кг</li>
+                        <li>Сахар - 2кг</li>
+                    </ul>
+                </div>
+                <div class="manual">
+                    Инструкция
+                    <ol>
+                        <li>Вытащить из слив косточки</li>
+                        <li>Сливы без косточек сложить в таз.</li>
+                        <li>С помощью мясорубки промолоть все сливы</li>
+                        <li>Собрать все промолотые сливы в таз</li>
+                        <li>В таз с промолотыми сливами добавить сахар</li>
+                        <li>
+                            После закипания варить джем из слив примерно 45 минут,
+                            периодически помешивая и снимая образующуюся пенку
+                        </li>
+                    </ol>
+                </div>
+            </article>
+        </section>
+        <figure class="image">
             <label for="card-5">
                 <img src="img/drain.jpg" alt="Слива" title="Слива">
             </label>
             <figcaption>
-                <label for="card-5-info">Рецепт</label>
+                <a href="#drain" class="link">Рецепт</a>
             </figcaption>
         </figure>
-        <figure class="card card-6">
+    </section>
+    <section class="card card-6" id="grapefruit">
+        <section class="recipe">
+            <a href="#" class="close">✕</a>
+            <header class="recipe-header">
+                <figure>
+                    <img src="img/grapefruit-recipe.jpg" alt="Физ" title="Физ">
+                    <figcaption>Физ грейпфрутовый</figcaption>
+                </figure>
+            </header>
+            <article class="recipe-content">
+                <div class="ingredients">
+                    Ингредиенты
+                    <ul>
+                        <li>Грейпфрутовый сок - 40 мл</li>
+                        <li>Гранатовый сироп - 30 мл</li>
+                        <li>Содовая или минеральная вода - 80 мл</li>
+                        <li>Яичный белок - 1 шт</li>
+                        <li>Лед - 1-2 кубика</li>
+                    </ul>
+                </div>
+                <div class="manual">
+                    Инструкция
+                    <ol>
+                        <li>
+                            Отделить от яйца белок и взбить
+                            до получения пенной массы
+                        </li>
+                        <li>
+                            Вылить взбитый белок в шейкер, добавить
+                            остальные компоненты и тщательно перемешать
+                        </li>
+                        <li>
+                            Полученный физ перелить в стакан со
+                            льдом и разбавить содовой водой
+                        </li>
+                    </ol>
+                </div>
+            </article>
+        </section>
+        <figure class="image">
             <label for="card-6">
                 <img src="img/grapefruit.jpg" alt="Грейпфрут" title="Грейпфрут">
             </label>
             <figcaption>
-                <label for="card-6-info">Рецепт</label>
+                <a href="#grapefruit" class="link">Рецепт</a>
             </figcaption>
         </figure>
-        <figure class="card card-7">
+    </section>
+    <section class="card card-7" id="raspberry">
+        <section class="recipe">
+            <a href="#" class="close">✕</a>
+            <header class="recipe-header">
+                <figure>
+                    <img src="img/raspberry-recipe.jpg" alt="Кули" title="Кули">
+                    <figcaption>Малиновое кули</figcaption>
+                </figure>
+            </header>
+            <article class="recipe-content">
+                <div class="ingredients">
+                    Ингредиенты
+                    <ul>
+                        <li>Ликёр малиновый - 1ч.л</li>
+                        <li>Малина - 200г</li>
+                        <li>Сахар - 50г</li>
+                    </ul>
+                </div>
+                <div class="manual">
+                    Инструкция
+                    <ol>
+                        <li>
+                            Поместить ягоды в чашу блендера и
+                            измельчить до состояния пюре.
+                        </li>
+                        <li>
+                            Протереть полученное пюре через
+                            мелкое сито в миску.
+                        </li>
+                        <li>
+                            Добавить сахарную пудру и перемешать
+                            её до полного растворения. Для взрослых в
+                            кули можно добавить малиновый ликёр.
+                        </li>
+                    </ol>
+                </div>
+            </article>
+        </section>
+        <figure class="image">
             <label for="card-7">
                 <img src="img/raspberry.jpg" alt="Малина" title="Малина">
             </label>
             <figcaption>
-                <label for="card-7-info">Рецепт</label>
+                <a href="#raspberry" class="link">Рецепт</a>
             </figcaption>
         </figure>
     </section>
-    <section class="recipes">
-        <label for="close" class="close-background"></label>
-        <section class="recipe card-1">
-            <section class="info">
-                <label for="close">✕</label>
-                <header>
-                    <h2>Яблочная шарлотка</h2>
-                </header>
-                <section>
-                    <div class="ingredients">
-                        <h6>Ингредиенты</h6>
-                        <ul>
-                            <li>Яблоки - 4-5шт</li>
-                            <li>Яйца - 4-5 шт</li>
-                            <li>Мука - 1 стакан</li>
-                            <li>Сахар - 1 стакан</li>
-                            <li>Разрыхлитель  - 1 ложка</li>
-                            <li>Белок яичный  - 1 шт</li>
-                            <li>Крупа манная  - 1 ложка</li>
-                        </ul>
-                    </div>
-                    <div class="manual">
-                        <h6>Инструкция</h6>
-                        <ol>
-                            <li>
-                                Яблоки нарезаем тонкими дольками и складываем в миску
-                            </li>
-                            <li>
-                                Яйца и взбиваем их в пышную пену
-                            </li>
-                            <li>
-                                В массу всыпаем муку и аккуратно перемешиваем тесто
-                            </li>
-                            <li>
-                                Выкладываем слой нарезанных яблок
-                            </li>
-                            <li>
-                                Полученная шарлотка выпекается около 35-40 минут при 180 градусах
-                            </li>
-                        </ol>
-                    </div>
-                </section>
-            </section>
-        </section>
-        <section class="recipe card-2">
-            <section class="info">
-                <label for="close">✕</label>
-                <header>
-                    <h2>Варенье из абрикосов</h2>
-                </header>
-                <section>
-                    <div class="ingredients">
-                        <h6>Ингредиенты</h6>
-                        <ul>
-                            <li>Абрикосов - 900г</li>
-                            <li>Сахара - 900г</li>
-                        </ul>
-                    </div>
-                    <div class="manual">
-                        <h6>Инструкция</h6>
-                        <ol>
-                            <li>Абрикосы моем</li>
-                            <li>
-                                Разламываем напополам или же
-                                разрезаем для изъятия косточек
-                            </li>
-                            <li>
-                                В глубокую емкость переносим плоды,
-                                засыпаем сахаром
-                            </li>
-                            <li>
-                                Быстро кипятим содержимое емкости 1 минуту
-                            </li>
-                            <li>
-                                Выдерживаем в прохладном месте примерно
-                                12 часов – пока плоды не пустят сок
-                            </li>
-                            <li>Оставляем без нагрева на 11 часов</li>
-                        </ol>
-                    </div>
-                </section>
-            </section>
-        </section>
-        <section class="recipe card-3">
-            <section class="info">
-                <label for="close">✕</label>
-                <header>
-                    <h2>Банановый пудинг</h2>
-                </header>
-                <section>
-                    <div class="ingredients">
-                        <h6>Ингредиенты</h6>
-                        <ul>
-                            <li>Бананы - 350г</li>
-                            <li>Белое вино - 50г</li>
-                            <li>Манка - 2ст.л</li>
-                            <li>Яйцо - 2-3шт</li>
-                            <li>Молока - 1 стакан</li>
-                        </ul>
-                    </div>
-                    <div class="manual">
-                        <h6>Инструкция</h6>
-                        <ol>
-                            <li>
-                                Сварите манную кашу на молоке, соедините
-                                с желтками, растертыми с сахаром
-                            </li>
-                            <li>
-                                Измельчите бананы до пюреобразной массы,
-                                смешайте с вином, соком лимона, измельченной
-                                цедры, взбитыми белками, добавьте смесь в
-                                манную кашу, снова перемешайте
-                            </li>
-                            <li>
-                                Разложите массу по смазанным формам, запеките
-                            </li>
-                        </ol>
-                    </div>
-                </section>
-            </section>
-        </section>
-        <section class="recipe card-4">
-            <section class="info">
-                <label for="close">✕</label>
-                <header>
-                    <h2>Компот из вишни</h2>
-                </header>
-                <section>
-                    <div class="ingredients">
-                        <h6>Ингредиенты</h6>
-                        <ul>
-                            <li>Вишня - 500г</li>
-                            <li>Вода - 1л</li>
-                            <li>Сахар - 7-8ст.л</li>
-                            <li>Лимонная кислота - 1-1,5г</li>
-                        </ul>
-                    </div>
-                    <div class="manual">
-                        <h6>Инструкция</h6>
-                        <ol>
-                            <li>Косточки оставляем</li>
-                            <li>
-                                Доведем воду до кипения и добавим
-                                сахар и лимонную кислоту
-                            </li>
-                            <li>
-                                Доводим сироп до кипения и
-                                выкладываем в него ягоды
-                            </li>
-                            <li>
-                                Доводим компот из вишни до
-                                кипения и выключаем огонь
-                            </li>
-                            <li>
-                                Кастрюлю следует накрыть крышкой
-                                и оставить до полного остывания
-                            </li>
-                        </ol>
-                    </div>
-                </section>
-            </section>
-        </section>
-        <section class="recipe card-5">
-            <section class="info">
-                <label for="close">✕</label>
-                <header>
-                    <h2>Джем из слив</h2>
-                </header>
-                <section>
-                    <div class="ingredients">
-                        <h6>Ингредиенты</h6>
-                        <ul>
-                            <li>Слива - 2кг</li>
-                            <li>Сахар - 2кг</li>
-                        </ul>
-                    </div>
-                    <div class="manual">
-                        <h6>Инструкция</h6>
-                        <ol>
-                            <li>Вытащить из слив косточки</li>
-                            <li>Сливы без косточек сложить в таз.</li>
-                            <li>С помощью мясорубки промолоть все сливы</li>
-                            <li>Собрать все промолотые сливы в таз</li>
-                            <li>В таз с промолотыми сливами добавить сахар</li>
-                            <li>
-                                После закипания варить джем из слив примерно 45 минут,
-                                периодически помешивая и снимая образующуюся пенку
-                            </li>
-                        </ol>
-                    </div>
-                </section>
-            </section>
-        </section>
-        <section class="recipe card-6">
-            <section class="info">
-                <label for="close">✕</label>
-                <header>
-                    <h2>Физ грейпфрутовый</h2>
-                </header>
-                <section>
-                    <div class="ingredients">
-                        <h6>Ингредиенты</h6>
-                        <ul>
-                            <li>Грейпфрутовый сок - 40 мл</li>
-                            <li>Гранатовый сироп - 30 мл</li>
-                            <li>Содовая или минеральная вода - 80 мл</li>
-                            <li>Яичный белок - 1 шт</li>
-                            <li>Лед - 1-2 кубика</li>
-                        </ul>
-                    </div>
-                    <div class="manual">
-                        <h6>Инструкция</h6>
-                        <ol>
-                            <li>
-                                Отделить от яйца белок и взбить
-                                до получения пенной массы
-                            </li>
-                            <li>
-                                Вылить взбитый белок в шейкер, добавить
-                                остальные компоненты и тщательно перемешать
-                            </li>
-                            <li>
-                                Полученный физ перелить в стакан со
-                                льдом и разбавить содовой водой
-                            </li>
-                        </ol>
-                    </div>
-                </section>
-            </section>
-        </section>
-        <section class="recipe card-7">
-            <section class="info">
-                <label for="close">✕</label>
-                <header>
-                    <h2>Малиновое кули</h2>
-                </header>
-                <section>
-                    <div class="ingredients">
-                        <h6>Ингредиенты</h6>
-                        <ul>
-                            <li>Ликёр малиновый - 1ч.л</li>
-                            <li>Малина - 200г</li>
-                            <li>Сахар - 50г</li>
-                        </ul>
-                    </div>
-                    <div class="manual">
-                        <h6>Инструкция</h6>
-                        <ol>
-                            <li>
-                                Поместить ягоды в чашу блендера и
-                                измельчить до состояния пюре.
-                            </li>
-                            <li>
-                                Протереть полученное пюре через
-                                мелкое сито в миску.
-                            </li>
-                            <li>
-                                Добавить сахарную пудру и перемешать
-                                её до полного растворения. Для взрослых в
-                                кули можно добавить малиновый ликёр.
-                            </li>
-                        </ol>
-                    </div>
-                </section>
-            </section>
-        </section>
-    </section>
+    <a href="#" class="background"></a>
 </main>
 </body>
 </html>
