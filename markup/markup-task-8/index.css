@@ -390,7 +390,8 @@ figure img
 .view:checked ~ .card-7:checked ~ .card-6
 {
     z-index: 6;
-    transform: translateX(-100%) perspective(300px) translateZ(-100px) rotateY(-50deg);
+    transform: translateX(-100%) perspective(300px)
+        translateZ(-100px) rotateY(-50deg);
 }
 
 .view:checked ~ .card-1:checked ~ .card-2,
@@ -402,7 +403,8 @@ figure img
 .view:checked ~ .card-7:checked ~ .card-1
 {
     z-index: 6;
-    transform: translateX(100%) perspective(300px) translateZ(-100px) rotateY(50deg);
+    transform: translateX(100%) perspective(300px)
+        translateZ(-100px) rotateY(50deg);
 }
 
 .view:checked ~ .card-1:checked ~ .card-6,
@@ -414,7 +416,8 @@ figure img
 .view:checked ~ .card-7:checked ~ .card-5
 {
     z-index: 5;
-    transform: translateX(-110%) perspective(300px) translateZ(-360px) rotateY(-102deg);
+    transform: translateX(-110%) perspective(300px)
+        translateZ(-360px) rotateY(-102deg);
 }
 
 .view:checked ~ .card-1:checked ~ .card-3,
@@ -426,7 +429,8 @@ figure img
 .view:checked ~ .card-7:checked ~ .card-2
 {
     z-index: 5;
-    transform: translateX(110%) perspective(300px) translateZ(-360px) rotateY(102deg);
+    transform: translateX(110%) perspective(300px)
+        translateZ(-360px) rotateY(102deg);
 }
 
 .view:checked ~ .card-1:checked ~ .card-5,
@@ -438,7 +442,8 @@ figure img
 .view:checked ~ .card-7:checked ~ .card-4
 {
     z-index: 4;
-    transform: translateX(-50%) perspective(300px) translateZ(-300px) rotateY(-160deg);
+    transform: translateX(-50%) perspective(300px)
+        translateZ(-300px) rotateY(-160deg);
 }
 
 .view:checked ~ .card-1:checked ~ .card-4,
@@ -450,7 +455,8 @@ figure img
 .view:checked ~ .card-7:checked ~ .card-3
 {
     z-index: 4;
-    transform: translateX(50%) perspective(300px) translateZ(-300px) rotateY(160deg);
+    transform: translateX(50%) perspective(300px)
+        translateZ(-300px) rotateY(160deg);
 }
 
 .fb
