@@ -41,7 +41,7 @@ body
     transition: transform .9s, z-index .1s;
     z-index: 10;
     transform: perspective(300px);
-    box-shadow: 0 16px 32px rgba(60, 63, 65, .78);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, .7);
 }
 
 .recipe,
@@ -377,4 +377,91 @@ figure img
     transition: opacity .5s .2s, visibility .5s .2s;
     opacity: 0;
     visibility: hidden;
+}
+
+/* Extra */
+
+.view:checked ~ .card-1:checked ~ .card-7,
+.view:checked ~ .card-2:checked ~ .card-1,
+.view:checked ~ .card-3:checked ~ .card-2,
+.view:checked ~ .card-4:checked ~ .card-3,
+.view:checked ~ .card-5:checked ~ .card-4,
+.view:checked ~ .card-6:checked ~ .card-5,
+.view:checked ~ .card-7:checked ~ .card-6
+{
+    z-index: 6;
+    transform: translateX(-100%) perspective(300px) translateZ(-100px) rotateY(-50deg);
+}
+
+.view:checked ~ .card-1:checked ~ .card-2,
+.view:checked ~ .card-2:checked ~ .card-3,
+.view:checked ~ .card-3:checked ~ .card-4,
+.view:checked ~ .card-4:checked ~ .card-5,
+.view:checked ~ .card-5:checked ~ .card-6,
+.view:checked ~ .card-6:checked ~ .card-7,
+.view:checked ~ .card-7:checked ~ .card-1
+{
+    z-index: 6;
+    transform: translateX(100%) perspective(300px) translateZ(-100px) rotateY(50deg);
+}
+
+.view:checked ~ .card-1:checked ~ .card-6,
+.view:checked ~ .card-2:checked ~ .card-7,
+.view:checked ~ .card-3:checked ~ .card-1,
+.view:checked ~ .card-4:checked ~ .card-2,
+.view:checked ~ .card-5:checked ~ .card-3,
+.view:checked ~ .card-6:checked ~ .card-4,
+.view:checked ~ .card-7:checked ~ .card-5
+{
+    z-index: 5;
+    transform: translateX(-110%) perspective(300px) translateZ(-360px) rotateY(-102deg);
+}
+
+.view:checked ~ .card-1:checked ~ .card-3,
+.view:checked ~ .card-2:checked ~ .card-4,
+.view:checked ~ .card-3:checked ~ .card-5,
+.view:checked ~ .card-4:checked ~ .card-6,
+.view:checked ~ .card-5:checked ~ .card-7,
+.view:checked ~ .card-6:checked ~ .card-1,
+.view:checked ~ .card-7:checked ~ .card-2
+{
+    z-index: 5;
+    transform: translateX(110%) perspective(300px) translateZ(-360px) rotateY(102deg);
+}
+
+.view:checked ~ .card-1:checked ~ .card-5,
+.view:checked ~ .card-2:checked ~ .card-6,
+.view:checked ~ .card-3:checked ~ .card-7,
+.view:checked ~ .card-4:checked ~ .card-1,
+.view:checked ~ .card-5:checked ~ .card-2,
+.view:checked ~ .card-6:checked ~ .card-3,
+.view:checked ~ .card-7:checked ~ .card-4
+{
+    z-index: 4;
+    transform: translateX(-50%) perspective(300px) translateZ(-300px) rotateY(-160deg);
+}
+
+.view:checked ~ .card-1:checked ~ .card-4,
+.view:checked ~ .card-2:checked ~ .card-5,
+.view:checked ~ .card-3:checked ~ .card-6,
+.view:checked ~ .card-4:checked ~ .card-7,
+.view:checked ~ .card-5:checked ~ .card-1,
+.view:checked ~ .card-6:checked ~ .card-2,
+.view:checked ~ .card-7:checked ~ .card-3
+{
+    z-index: 4;
+    transform: translateX(50%) perspective(300px) translateZ(-300px) rotateY(160deg);
+}
+
+.fb
+{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #fda;
+    bottom: 0;
+    right: 0;
+    margin: 20px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, .5);
 }
