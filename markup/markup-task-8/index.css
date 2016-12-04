@@ -61,7 +61,6 @@ body
 {
     box-shadow: none;
     font-size: .3em;
-    transition: z-index .3s;
     background: #fff;
     transform: scale(1, -1);
     box-sizing: border-box;
@@ -152,6 +151,9 @@ body
     margin: 0;
     width: 100%;
     height: 100%;
+    transition: opacity .5s, visibility .5s;
+    opacity: 1;
+    visibility: visible;
 }
 
 figure img
@@ -364,13 +366,15 @@ figure img
     transform: scale(2.5) rotateX(-179.9deg);
 }
 
-.card-1:checked ~ .card-1:target .recipe,
-.card-2:checked ~ .card-2:target .recipe,
-.card-3:checked ~ .card-3:target .recipe,
-.card-4:checked ~ .card-4:target .recipe,
-.card-5:checked ~ .card-5:target .recipe,
-.card-6:checked ~ .card-6:target .recipe,
-.card-7:checked ~ .card-7:target .recipe
+.card-1:checked ~ .card-1:target .image,
+.card-2:checked ~ .card-2:target .image,
+.card-3:checked ~ .card-3:target .image,
+.card-4:checked ~ .card-4:target .image,
+.card-5:checked ~ .card-5:target .image,
+.card-6:checked ~ .card-6:target .image,
+.card-7:checked ~ .card-7:target .image
 {
-    z-index: 2;
+    transition: opacity .5s .2s, visibility .5s .2s;
+    opacity: 0;
+    visibility: hidden;
 }
