@@ -35,7 +35,7 @@ exports.serial = function (operations, callback) {
  * @param {Number} limit – максимальное количество выполняемых параллельно операций
  * @param {Function} callback
  */
-var parallel = function (operations, limit, callback) {
+exports.parallel = function (operations, limit, callback) {
     var nextOperations = operations.splice(limit);
     var result = [];
     var processId = 0;
@@ -120,7 +120,7 @@ exports.mapLimit = function (items, limit, operation, callback) {
             operation(item, cb);
         };
     });
-    parallel(operations, limit, callback);
+    this.parallel(operations, limit, callback);
 };
 
 /**
