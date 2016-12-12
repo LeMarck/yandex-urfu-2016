@@ -707,6 +707,7 @@ a
     font-size: 18px;
     line-height: 24px;
     color: #fff;
+    margin: 0;
 }
 
 .content__main-news-subtitle
@@ -745,7 +746,7 @@ a
 
 .content__header-title
 {
-    margin-left: 7px;
+    margin: 0 0 0 7px;
     text-transform: uppercase;
     font-weight: bold;
     font-size: 10px;
