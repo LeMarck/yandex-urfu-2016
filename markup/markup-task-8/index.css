@@ -1,0 +1,473 @@
+html,
+body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background: #fafafa;
+    font: 16px Arial, sans-serif;
+}
+
+input
+{
+    display: none;
+}
+
+body
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.cards
+{
+    position: relative;
+    width: 270px;
+    height: 180px;
+    margin: 0 auto;
+}
+
+.card
+{
+    position: absolute;
+    overflow: hidden;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    transform-style: preserve-3d;
+    transition: transform .9s, z-index .1s;
+    z-index: 10;
+    transform: perspective(300px);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, .7);
+}
+
+.recipe,
+.image
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+/* Recipe */
+
+.recipe
+{
+    box-shadow: none;
+    font-size: .3em;
+    background: #fff;
+    transform: scale(1, -1);
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.close
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px 10px;
+    font-size: 2em;
+    text-decoration: none;
+    z-index: 10;
+    font-weight: bold;
+    color: #fff;
+}
+
+.recipe-header
+{
+    position: relative;
+    height: 40px;
+}
+
+.recipe-header figure
+{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    margin: 0;
+}
+
+.recipe-header figcaption
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: #fff;
+    font-size: 3em;
+    padding: 5px 0 0 16px;
+    background: rgba(0, 0, 0, .5);
+}
+
+.recipe-content
+{
+    padding: 5px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.ingredients
+{
+    width: 40%;
+    padding: 0 5px;
+    font-weight: bold;
+}
+
+.manual
+{
+    width: 50%;
+    padding: 0 5px;
+    font-weight: bold;
+}
+
+.ingredients ul
+{
+    list-style: none;
+    padding: 5px 0;
+    font-weight: normal;
+    font-style: italic;
+}
+
+.manual ol
+{
+    padding: 5px;
+    font-weight: normal;
+}
+
+/* Card image */
+
+.image
+{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity .5s, visibility .5s;
+    opacity: 1;
+    visibility: visible;
+}
+
+figure img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image figcaption
+{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .5s, visibility .5s;
+}
+
+/* Link */
+
+.link
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    border: 5px solid #fafafa;
+    border-radius: 50%;
+    margin: 0 auto;
+    color: #fafafa;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.7em;
+}
+
+.card-1:checked ~ .card-1:not(:target):hover figcaption,
+.card-2:checked ~ .card-2:not(:target):hover figcaption,
+.card-3:checked ~ .card-3:not(:target):hover figcaption,
+.card-4:checked ~ .card-4:not(:target):hover figcaption,
+.card-5:checked ~ .card-5:not(:target):hover figcaption,
+.card-6:checked ~ .card-6:not(:target):hover figcaption,
+.card-7:checked ~ .card-7:not(:target):hover figcaption
+{
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Modal background */
+
+.background
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .5);
+    z-index: 8;
+    opacity: 0;
+    transition: opacity .5s .3s, visibility .5s .3s;
+    visibility: hidden;
+}
+
+.card-1:checked ~ .card-1:target ~ .background,
+.card-2:checked ~ .card-2:target ~ .background,
+.card-3:checked ~ .card-3:target ~ .background,
+.card-4:checked ~ .card-4:target ~ .background,
+.card-5:checked ~ .card-5:target ~ .background,
+.card-6:checked ~ .card-6:target ~ .background,
+.card-7:checked ~ .card-7:target ~ .background
+{
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Transform */
+
+.card-2:checked ~ .card-1,
+.card-3:checked ~ .card-2,
+.card-4:checked ~ .card-3,
+.card-5:checked ~ .card-4,
+.card-6:checked ~ .card-5,
+.card-7:checked ~ .card-6
+{
+    z-index: 6;
+    transform: scale(.7) translateX(-80%) perspective(300px)
+        rotateY(40deg) translateZ(-40px);
+}
+
+.card-1:checked ~ .card-2,
+.card-2:checked ~ .card-3,
+.card-3:checked ~ .card-4,
+.card-4:checked ~ .card-5,
+.card-5:checked ~ .card-6,
+.card-6:checked ~ .card-7
+{
+    z-index: 6;
+    transform: scale(.7) translateX(80%) perspective(300px)
+        rotateY(-40deg) translateZ(-40px);
+}
+
+.card-3:checked ~ .card-1,
+.card-4:checked ~ .card-2,
+.card-5:checked ~ .card-3,
+.card-6:checked ~ .card-4,
+.card-7:checked ~ .card-5
+{
+    z-index: 5;
+    transform: scale(.7) translateX(-150%) perspective(300px)
+        rotateY(35deg) translateZ(-40px);
+}
+
+.card-1:checked ~ .card-3,
+.card-2:checked ~ .card-4,
+.card-3:checked ~ .card-5,
+.card-4:checked ~ .card-6,
+.card-5:checked ~ .card-7
+{
+    z-index: 5;
+    transform: scale(.7) translateX(150%) perspective(300px)
+        rotateY(-35deg) translateZ(-40px);
+}
+
+.card-4:checked ~ .card-1,
+.card-5:checked ~ .card-2,
+.card-6:checked ~ .card-3,
+.card-7:checked ~ .card-4
+{
+    z-index: 4;
+    transform: scale(.7) translateX(-210%) perspective(300px)
+        rotateY(30deg) translateZ(-40px);
+}
+
+.card-1:checked ~ .card-4,
+.card-2:checked ~ .card-5,
+.card-3:checked ~ .card-6,
+.card-4:checked ~ .card-7
+{
+    z-index: 4;
+    transform: scale(.7) translateX(210%) perspective(300px)
+        rotateY(-30deg) translateZ(-40px);
+}
+
+.card-1:checked ~ .card-5,
+.card-2:checked ~ .card-6,
+.card-3:checked ~ .card-7
+{
+    z-index: 3;
+    transform: scale(.7) translateX(250%) perspective(300px)
+        rotateY(-25deg) translateZ(-40px);
+}
+
+.card-5:checked ~ .card-1,
+.card-6:checked ~ .card-2,
+.card-7:checked ~ .card-3
+{
+    z-index: 3;
+    transform: scale(.7) translateX(-250%) perspective(300px)
+        rotateY(25deg) translateZ(-40px);
+}
+
+.card-1:checked ~ .card-6,
+.card-2:checked ~ .card-7
+{
+    z-index: 2;
+    transform: scale(.7) translateX(280%) perspective(300px)
+        rotateY(-20deg) translateZ(-40px);
+}
+
+.card-6:checked ~ .card-1,
+.card-7:checked ~ .card-2
+{
+    z-index: 2;
+    transform: scale(.7) translateX(-280%) perspective(300px)
+        rotateY(20deg) translateZ(-40px);
+}
+
+.card-1:checked ~ .card-7
+{
+    z-index: 1;
+    transform: scale(.7) translateX(300%) perspective(300px)
+        rotateY(-15deg) translateZ(-40px);
+}
+
+.card-7:checked ~ .card-1
+{
+    z-index: 1;
+    transform: scale(.7) translateX(-300%) perspective(300px)
+        rotateY(15deg) translateZ(-40px);
+}
+
+/* Show */
+
+.card-1:checked ~ .card-1:target,
+.card-2:checked ~ .card-2:target,
+.card-3:checked ~ .card-3:target,
+.card-4:checked ~ .card-4:target,
+.card-5:checked ~ .card-5:target,
+.card-6:checked ~ .card-6:target,
+.card-7:checked ~ .card-7:target
+{
+    transform: scale(2.5) rotateX(-179.9deg);
+}
+
+.card-1:checked ~ .card-1:target .image,
+.card-2:checked ~ .card-2:target .image,
+.card-3:checked ~ .card-3:target .image,
+.card-4:checked ~ .card-4:target .image,
+.card-5:checked ~ .card-5:target .image,
+.card-6:checked ~ .card-6:target .image,
+.card-7:checked ~ .card-7:target .image
+{
+    transition: opacity .5s .2s, visibility .5s .2s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Extra */
+
+.view:checked ~ .card-1:checked ~ .card-7,
+.view:checked ~ .card-2:checked ~ .card-1,
+.view:checked ~ .card-3:checked ~ .card-2,
+.view:checked ~ .card-4:checked ~ .card-3,
+.view:checked ~ .card-5:checked ~ .card-4,
+.view:checked ~ .card-6:checked ~ .card-5,
+.view:checked ~ .card-7:checked ~ .card-6
+{
+    z-index: 6;
+    transform: translateX(-100%) perspective(300px)
+        translateZ(-100px) rotateY(-50deg);
+}
+
+.view:checked ~ .card-1:checked ~ .card-2,
+.view:checked ~ .card-2:checked ~ .card-3,
+.view:checked ~ .card-3:checked ~ .card-4,
+.view:checked ~ .card-4:checked ~ .card-5,
+.view:checked ~ .card-5:checked ~ .card-6,
+.view:checked ~ .card-6:checked ~ .card-7,
+.view:checked ~ .card-7:checked ~ .card-1
+{
+    z-index: 6;
+    transform: translateX(100%) perspective(300px)
+        translateZ(-100px) rotateY(50deg);
+}
+
+.view:checked ~ .card-1:checked ~ .card-6,
+.view:checked ~ .card-2:checked ~ .card-7,
+.view:checked ~ .card-3:checked ~ .card-1,
+.view:checked ~ .card-4:checked ~ .card-2,
+.view:checked ~ .card-5:checked ~ .card-3,
+.view:checked ~ .card-6:checked ~ .card-4,
+.view:checked ~ .card-7:checked ~ .card-5
+{
+    z-index: 5;
+    transform: translateX(-110%) perspective(300px)
+        translateZ(-360px) rotateY(-102deg);
+}
+
+.view:checked ~ .card-1:checked ~ .card-3,
+.view:checked ~ .card-2:checked ~ .card-4,
+.view:checked ~ .card-3:checked ~ .card-5,
+.view:checked ~ .card-4:checked ~ .card-6,
+.view:checked ~ .card-5:checked ~ .card-7,
+.view:checked ~ .card-6:checked ~ .card-1,
+.view:checked ~ .card-7:checked ~ .card-2
+{
+    z-index: 5;
+    transform: translateX(110%) perspective(300px)
+        translateZ(-360px) rotateY(102deg);
+}
+
+.view:checked ~ .card-1:checked ~ .card-5,
+.view:checked ~ .card-2:checked ~ .card-6,
+.view:checked ~ .card-3:checked ~ .card-7,
+.view:checked ~ .card-4:checked ~ .card-1,
+.view:checked ~ .card-5:checked ~ .card-2,
+.view:checked ~ .card-6:checked ~ .card-3,
+.view:checked ~ .card-7:checked ~ .card-4
+{
+    z-index: 4;
+    transform: translateX(-50%) perspective(300px)
+        translateZ(-300px) rotateY(-160deg);
+}
+
+.view:checked ~ .card-1:checked ~ .card-4,
+.view:checked ~ .card-2:checked ~ .card-5,
+.view:checked ~ .card-3:checked ~ .card-6,
+.view:checked ~ .card-4:checked ~ .card-7,
+.view:checked ~ .card-5:checked ~ .card-1,
+.view:checked ~ .card-6:checked ~ .card-2,
+.view:checked ~ .card-7:checked ~ .card-3
+{
+    z-index: 4;
+    transform: translateX(50%) perspective(300px)
+        translateZ(-300px) rotateY(160deg);
+}
+
+.fb
+{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #fda;
+    bottom: 0;
+    right: 0;
+    margin: 20px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, .5);
+}
